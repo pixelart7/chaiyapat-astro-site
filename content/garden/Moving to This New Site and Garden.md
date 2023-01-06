@@ -16,7 +16,7 @@ But I think I know how to start writing and "publishing" again.
 
 I've been using [Obsidian](https://obsidian.md/) for normal note-taking (ideas, journaling.) I migrated from Bear Notes, Notion, and Day One, and put everything in just this app. For those who aren't familiar with Obsidian, it is a note-taking app that uses a native file system (you know, folder, files, Windows Explorer, macOS Finder, all of that) to store your notes as a Markdown. I really liked the idea of all my notes in files, that way I can move them around without restricting myself to a proprietary format that others note-taking apps may have (imagine trying to export your notes from Notion or Evernote.)
 
-After using as a note-taking app for a while, I learned the concept of a [[second brain]], the idea of putting knowledge into digital notes with links between each note to help fortify the relationship between knowledge. And that's when I got my will to write back.
+After using as a note-taking app for a while, I learned the concept of a second brain, the idea of putting knowledge into digital notes with links between each note to help fortify the relationship between knowledge. And that's when I got my will to write back.
 
 And here we are, a new place, all customized and personalized to how I liked it. I will add the explanation of the garden concept and how I build this site below. (That's how comfortable I am to "publish" a non-finish note :P)
 
