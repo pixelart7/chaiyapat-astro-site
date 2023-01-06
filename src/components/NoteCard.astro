@@ -13,7 +13,7 @@ const noteStage = 0 + ((frontmatter.abstract) ? 1 : 0) + ((frontmatter.cover) ? 
 `}>
   <article>
     {frontmatter.cover && 
-      <div class="aspect-[1.91/1]">
+      <div class="aspect-[1.91/1] border-b border-gray-500/20">
         <img src={frontmatter.cover} class="w-full h-full object-cover" alt={`Cover image for ${title}`}>
       </div>
     }
