@@ -39,9 +39,10 @@ const fallbackOgImage = new URL('ogimage.jpg', Astro.site);
 		<link rel="manifest" href="/site.webmanifest">
 		<link rel="canonical" href={canonicalURL} />
 		<meta name="msapplication-TileColor" content="#151313">
-		<meta name="theme-color" content="#151313">
-		<meta name="generator" content={Astro.generator} />
 		<meta name="theme-color" content="#0BA8C7">
+		<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+		<meta name="theme-color" content="#151313" media="(prefers-color-scheme: dark)">
+		<meta name="generator" content={Astro.generator} />
 		<meta name="format-detection" content="telephone=no">
 
     <meta property="og:title" content={title} />
