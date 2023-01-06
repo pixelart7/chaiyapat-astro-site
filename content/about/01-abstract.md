@@ -1,0 +1,5 @@
+---
+short: "An everything-computer enthusiast with a mixture of experience. Capable of working and leading in a team environment. Passionate about human-computer interaction and end-user design & development."
+
+long: "An everything-computer enthusiast with a mixture of experience. Capable of working and leading in a team environment. Passionate about human-computer interaction and end-user design & development. Curious about computers since 2011. Started accepting solution development freelance jobs in 2016. Learned various skills, such as front-end development, UX design, software analysis, and client-facing communication from working at Idea Vivat and self-employed freelance jobs. Learned research process and human-computer interaction research methodology from Master’s Degree study at Shibaura Institute of Technology, Japan."
+---

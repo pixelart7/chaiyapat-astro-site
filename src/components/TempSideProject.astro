@@ -1,0 +1,197 @@
+---
+import HomeDisplay from '../assets/home-ambient-display.jpg';
+import ToLink from '../assets/to.jpg';
+import Gimme from '../assets/gimme.jpg';
+import Lyrics from '../assets/lyrics.jpg';
+import Hon from '../assets/hon.jpg';
+---
+
+<div class="bg-white rounded-xl p-6 print:p-0" id="side-project">
+  <h2 class="text-2xl font-bold mb-3 mt-2">Side Projects</h2><div>
+    <div class="spacer -mx-6 print:mx-0">
+    </div><div>
+      <div class="md:flex md:space-x-3 print:space-x-0">
+        <div
+          class="flex-1 max-h-48 overflow-hidden rounded-xl border border-gray-100 print:hidden"
+        >
+          <img
+            class="w-full object-cover"
+            alt="Image of my home e-ink ambient display"
+            src={HomeDisplay}
+          />
+        </div><div class="flex-1 min-w-96 justify-end flex-col md:flex">
+          <h3 class="text-xl font-semibold leading-tight mt-6 md:mt-0">
+            Personal Cloud &amp; IoTs
+          </h3><h5 class="text-xs font-medium text-gray-500">Ongoing Hobby</h5>
+        </div>
+      </div><p class="mt-3 leading-tight">
+        In my free time, I work on my cloud for self-hosting applications and
+        the integration of various IoT devices. I have several servers on the
+        cloud and a Raspberry Pi running as a home server, both are just for
+        fun. On the cloud, I setup the majority of applications using Docker,
+        apply security with VPN and firewall.
+      </p><p class="text-sm mt-3 leading-tight">
+        Image: an e-ink ambient display that runs on M5Stack's M5Paper.
+        Information is fetched and aggregated on the cloud then this device
+        periodically refreshes itself. (<a
+          class="underline hover:text-gray-600"
+          href="https://github.com/pixelart7/m5paper-micropython-data-text-display"
+          target="_blank"
+          >github.com/pixelart7/m5paper-micropython-data-text-display</a
+        >)
+      </p>
+    </div><div class="spacer -mx-6 print:mx-0">
+      <hr
+        class="border-gray-300 print:border-gray-500 print:mt-4 print:mb-2 mt-6 mb-4 print:opacity-0 print:mt-1 print:mb-2"
+      />
+    </div><div>
+      <h3 class="text-xl font-semibold leading-tight mt-6 md:mt-0">
+        Localization File (.uasset) Parser
+      </h3><h5 class="text-xs font-medium text-gray-500">2019</h5><p
+        class="mt-3 leading-tight"
+      >
+        A quick (and probably dirty) .uasset parser for my friend, "chaisiam" at
+        PlearnGaming. He works on an <span class="font-semibold"
+          >unofficial</span
+        > Thai localization mod for a game. I helped him parse .uasset file to .csv
+        so that he can work easily.
+      </p><div class="mt-2">
+        <h5 class="inline mr-1 font-semibold">Source:</h5><a
+          class="underline hover:text-gray-600"
+          href="https://github.com/pixelart7/uasset-parser"
+          target="_blank">github.com/pixelart7/uasset-parser</a>
+      </div>
+    </div><div class="spacer -mx-6 print:mx-0">
+      <hr
+        class="border-gray-300 print:border-gray-500 print:mt-4 print:mb-2 mt-6 mb-4 print:opacity-0 print:mt-1 print:mb-2"
+      />
+    </div><div>
+      <div class="md:flex md:space-x-3 print:space-x-0">
+        <div
+          class="flex-1 max-h-48 overflow-hidden rounded-xl border border-gray-100 print:hidden"
+        >
+          <img
+            class="w-full object-cover"
+            alt='Image of my side project: "To" Link Shortener'
+            src={ToLink}
+          />
+        </div><div class="flex-1 min-w-96 justify-end flex-col md:flex">
+          <h3 class="text-xl font-semibold leading-tight mt-6 md:mt-0">
+            To. Link Shortener
+          </h3><h5 class="text-xs font-medium text-gray-500">2019</h5>
+        </div>
+      </div><p class="mt-3 leading-tight">
+        An educational link shortener service that I built in order to learn AMP
+        framework.
+      </p><div class="mt-2">
+        <h5 class="inline mr-1 font-semibold">Live:</h5><a
+          class="underline hover:text-gray-600"
+          href="https://to-url-shortener.netlify.app/"
+          target="_blank">to-url-shortener.netlify.app</a
+        ><br /><h5 class="inline mr-1 font-semibold">Source:</h5><a
+          class="underline hover:text-gray-600"
+          href="https://github.com/pixelart7/to-link-shortener-web"
+          target="_blank">github.com/pixelart7/to-link-shortener-web</a
+        >, <a
+          class="underline hover:text-gray-600"
+          href="https://github.com/pixelart7/to-link-shortener-surge-sh"
+          target="_blank">/to-link-shortener-surge-sh</a>
+      </div>
+    </div><div class="spacer -mx-6 print:mx-0">
+      <hr
+        class="border-gray-300 print:border-gray-500 print:mt-4 print:mb-2 mt-6 mb-4 print:opacity-0 print:mt-1 print:mb-2"
+      />
+    </div><div>
+      <div class="md:flex md:space-x-3 print:space-x-0">
+        <div
+          class="flex-1 max-h-48 overflow-hidden rounded-xl border border-gray-100 print:hidden"
+        >
+          <img
+            class="w-full object-cover"
+            alt="Image of my side project: Gimme Money"
+            src={Gimme}
+          />
+        </div><div class="flex-1 min-w-96 justify-end flex-col md:flex">
+          <h3 class="text-xl font-semibold leading-tight mt-6 md:mt-0">
+            Gimme Money
+          </h3><h5 class="text-xs font-medium text-gray-500">2019</h5>
+        </div>
+      </div><p class="mt-3 leading-tight">
+        Designed and built a simple application built on Vue with PWA for
+        generating a PromptPay QR code with the desired amount of money.
+      </p><div class="mt-2">
+        <h5 class="inline mr-1 font-semibold">Live:</h5><a
+          class="underline hover:text-gray-600"
+          href="https://gimme.netlify.app"
+          target="_blank">gimme.netlify.app</a
+        ><br /><h5 class="inline mr-1 font-semibold">Source:</h5><a
+          class="underline hover:text-gray-600"
+          href="https://github.com/pixelart7/gimme-money"
+          target="_blank">github.com/pixelart7/gimme-money</a>
+      </div>
+    </div><div class="spacer -mx-6 print:mx-0">
+      <hr
+        class="border-gray-300 print:border-gray-500 print:mt-4 print:mb-2 mt-6 mb-4 print:opacity-0 print:mt-1 print:mb-2"
+      />
+    </div><div>
+      <div class="md:flex md:space-x-3 print:space-x-0">
+        <div
+          class="flex-1 max-h-48 overflow-hidden rounded-xl border border-gray-100 print:hidden"
+        >
+          <img
+            class="w-full object-cover"
+            alt="Image of my side project: Lyrics Base"
+            src={Lyrics}
+          />
+        </div><div class="flex-1 min-w-96 justify-end flex-col md:flex">
+          <h3 class="text-xl font-semibold leading-tight mt-6 md:mt-0">
+            Lyrics Base
+          </h3><h5 class="text-xs font-medium text-gray-500">2018</h5>
+        </div>
+      </div><p class="mt-3 leading-tight">
+        Designed and developed a web-based application on Vue with PWA for
+        storing lyrics in two languages. The app is built with LocalStorage.js
+        where all data are stored on the user's Google Drive.
+      </p><div class="mt-2">
+        <h5 class="inline mr-1 font-semibold">Live:</h5><a
+          class="underline hover:text-gray-600"
+          href="http://lyricsbase.pix7.me"
+          target="_blank">lyricsbase.pix7.me</a
+        ><br /><h5 class="inline mr-1 font-semibold">Source:</h5><a
+          class="underline hover:text-gray-600"
+          href="http://github.com/pixelart7/lyrics-base-2"
+          target="_blank">github.com/pixelart7/lyrics-base-2</a>
+      </div>
+    </div><div class="spacer -mx-6 print:mx-0">
+      <hr
+        class="border-gray-300 print:border-gray-500 print:mt-4 print:mb-2 mt-6 mb-4 print:opacity-0 print:mt-1 print:mb-2"
+      />
+    </div><div>
+      <div class="md:flex md:space-x-3 print:space-x-0">
+        <div
+          class="flex-1 max-h-48 overflow-hidden rounded-xl border border-gray-100 print:hidden"
+        >
+          <img
+            class="w-full object-cover"
+            alt="Image of my side project: Hon no Jisho"
+            src={Hon}
+          />
+        </div><div class="flex-1 min-w-96 justify-end flex-col md:flex">
+          <h3 class="text-xl font-semibold leading-tight mt-6 md:mt-0">
+            Hon no Jisho
+          </h3><h5 class="text-xs font-medium text-gray-500">2018</h5>
+        </div>
+      </div><p class="mt-3 leading-tight">
+        Designed and developed a web-based application on Vue with PWA for
+        storing book vocabulary in Japanese and English. Words are separated by
+        section and chapters with an additional API calls to Japanese-English
+        dictionary.
+      </p><div class="mt-2">
+        <h5 class="inline mr-1 font-semibold">Live:</h5><a
+          class="underline hover:text-gray-600"
+          href="https://hon-no-jisho.firebaseapp.com"
+          target="_blank">hon-no-jisho.firebaseapp.com</a>
+      </div>
+    </div>
+  </div>
+</div>

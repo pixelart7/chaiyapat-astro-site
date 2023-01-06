@@ -1,0 +1,44 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro"
+
+import AboutSectionWeb from "@components/AboutSectionWeb.astro"
+import AboutMDProse from "@components/AboutMDProse.astro"
+import AboutIntroWeb from "@components/AboutIntroWeb.astro"
+
+import TempSideProject from "@components/TempSideProject.astro"
+
+import Intro from "@content/about/02-intro.md"
+import Skill from "@content/about/03-skill.md"
+import Education from "@content/about/04-education.md"
+import Work from "@content/about/05-work.md"
+import Projects from "@content/about/06-projects.md"
+import SideProjects from "@content/about/07-side-projects.md"
+---
+
+<BaseLayout title="Chaiyapat Tantiworachot" cover={String(new URL('ogimage-about.jpg', Astro.site))}>
+  <div class="bg-reader dark:bg-reader-dark">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 p-2 max-w-container mx-auto">
+      <header class="md:col-span-2">
+        <AboutIntroWeb></AboutIntroWeb>
+      </header>
+      <div class="space-y-2 block md:hidden">
+        <AboutSectionWeb><AboutMDProse><Intro /></AboutMDProse></AboutSectionWeb>
+        <AboutSectionWeb><AboutMDProse><Work /></AboutMDProse></AboutSectionWeb>
+        <AboutSectionWeb><AboutMDProse><Projects /></AboutMDProse></AboutSectionWeb>
+        <AboutSectionWeb><AboutMDProse><Education /></AboutMDProse></AboutSectionWeb>
+        <AboutSectionWeb><AboutMDProse><Skill /></AboutMDProse></AboutSectionWeb>
+        <AboutSectionWeb><AboutMDProse><SideProjects /></AboutMDProse></AboutSectionWeb>
+      </div>
+      <div class="space-y-2 hidden md:block">
+        <AboutSectionWeb><AboutMDProse><Work /></AboutMDProse></AboutSectionWeb>
+        <AboutSectionWeb><AboutMDProse><Projects /></AboutMDProse></AboutSectionWeb>
+        <AboutSectionWeb><AboutMDProse><SideProjects /></AboutMDProse></AboutSectionWeb>
+      </div>
+      <div class="space-y-2 hidden md:block">
+        <AboutSectionWeb><AboutMDProse><Education /></AboutMDProse></AboutSectionWeb>
+        <AboutSectionWeb><AboutMDProse><Intro /></AboutMDProse></AboutSectionWeb>
+        <AboutSectionWeb><AboutMDProse><Skill /></AboutMDProse></AboutSectionWeb>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

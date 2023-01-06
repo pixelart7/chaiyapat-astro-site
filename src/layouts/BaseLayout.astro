@@ -1,9 +1,28 @@
 ---
+import '@fontsource/epilogue/700.css'; // en primary/headings
+import '@fontsource/epilogue/500.css'; // en primary/headings
+import '@fontsource/epilogue/300.css'; // en primary/headings
+
+import '@fontsource/ibm-plex-sans-thai'; // th primary/headings
+
+import '@fontsource/inter'; // en body
+import '@fontsource/inter/500.css'; // en body
+import '@fontsource/inter/700.css'; // en body
+
+import '@fontsource/lora'; // en essay
+import '@fontsource/noto-serif-thai'; // th catch-all
+
+import Logo from '../assets/logo.svg';
+import DarkModeSelect from '@components/DarkModeSelect.svelte';
 export interface Props {
 	title: string;
+	hideNavigation?: boolean;
 }
 
-const { title } = Astro.props;
+const { title, cover, hideNavigation } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const fallbackOgImage = new URL('ogimage.jpg', Astro.site);
 ---
 
 <!DOCTYPE html>
@@ -11,14 +30,88 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="canonical" href={canonicalURL} />
+		<meta name="msapplication-TileColor" content="#151313">
+		<meta name="theme-color" content="#151313">
 		<meta name="generator" content={Astro.generator} />
+		<meta name="theme-color" content="#0BA8C7">
+
+    <meta property="og:title" content={title} />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={cover || fallbackOgImage} />
+
+    <meta property="profile:first_name" content="Chaiyapat">
+    <meta property="profile:last_name" content="Tantiworachot">
+    <meta property="profile:gender" content="male">
+    <meta property="profile:username" content="pixelart7">
+
 		<title>{title}</title>
+		<script is:inline>
+			if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+				document.documentElement.classList.add('dark')
+			} else {
+				document.documentElement.classList.remove('dark')
+			}
+		</script>
 	</head>
-	<body>
+	<body class="bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-200">
+		{!hideNavigation && 
+			<div id="nav-container" class="top-0 left-0 right-0 sticky z-50 bg-white dark:bg-neutral-900 transition-opacity duration-100">
+				<nav class="max-w-container mx-auto px-2 sm:py-1">
+					<ul class="flex items-center font-bold text-lg pr-1 sm:pr-0 gap-1 sm:gap-2">
+						<li>
+							<a class="h-12 sm:h-14 flex leading-none hover:opacity-90 items-center p-2 sm:p-3 sm:mt-1 hover:bg-primary-500/10 rounded" href="/">
+								<img class="w-6 sm:w-8" src={Logo} alt="PIX7 Logo" />
+								<span class="hidden sm:block font-display text-xl self-end leading-3 ml-1">PIX7<br/><span class="text-sm leading-3 opacity-50">Chaiyapat</span></span>
+							</a>
+						</li>
+						<div class="flex-1"></div>
+						<li>
+							<a class="leading-none flex items-center p-2 lowercase hover:bg-primary-500/10 rounded" href="/about">
+								About
+							</a>
+						</li>
+						<li>
+							<a class="leading-none flex items-center p-2 lowercase hover:bg-primary-500/10 rounded" href="/garden">
+								Garden
+							</a>
+						</li>
+						<li class="w-8">
+							<DarkModeSelect client:only="svelte"></DarkModeSelect>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		}
 		<slot />
 	</body>
 </html>
+
+<script>
+	let lastY = 0;
+
+	function decideHideNav() {
+		const navContainer = document.querySelector('#nav-container');
+		if (navContainer) {
+			if (window.pageYOffset > lastY && window.pageYOffset > 64) {
+				navContainer.style.opacity = 0;
+			} else {
+				navContainer.style = {};
+			}
+			lastY = window.pageYOffset
+		}
+	}
+
+	window.addEventListener('scroll', () => {
+		decideHideNav();
+	})
+</script>
 
 <style is:global>
 </style>

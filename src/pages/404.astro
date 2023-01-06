@@ -1,0 +1,23 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro'
+const { title } = Astro.props.frontmatter || Astro.props;
+---
+
+<BaseLayout title="Not Found">
+  <div class="bg-reader dark:bg-reader-dark shadow-2xl shadow-reader dark:shadow-reader-dark">
+    <div class="mx-auto max-w-container">
+      <div class="pb-12 px-2">
+        <div class="max-w-container mb-12 pb-12">
+          <div class="max-w-[65ch] mx-auto pt-24">
+            <h1 class="font-display text-4xl font-bold text-center">Nothing... yet</h1>
+          </div>
+        </div>
+        <div class="prose mx-auto dark:prose-invert font-essay text-center">
+          <p>
+            If you navigated through a link from my garden, this idea might not be planted yet. It may or may not be plant in the future. For now <a href="javascript:history.back()">return back</a>.</li>
+          </p>
+        </div>
+      </div>
+    </main>
+  </div>
+</BaseLayout>

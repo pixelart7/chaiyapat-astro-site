@@ -1,0 +1,16 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro"
+
+import AboutIntroWeb from "@components/AboutIntroWeb.astro"
+---
+
+<BaseLayout title="Chaiyapat Tantiworachot" hideNavigation={true}>
+  <div class="pt-8 bg-reader dark:bg-reader-dark min-h-screen flex flex-col justify-center items-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 p-2 max-w-container mx-auto">
+      <header class="md:col-span-2">
+        <AboutIntroWeb></AboutIntroWeb>
+      </header>
+    </div>
+    <a href="/about" class="mt-6 mb-2 hover:opacity-75 text-sm p-2 text-gray-500/40">return to about</a>
+  </div>
+</BaseLayout>

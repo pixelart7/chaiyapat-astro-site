@@ -1,0 +1,24 @@
+---
+import Note from '@layouts/Note.astro'
+
+import { format } from 'src/store/garden';
+
+export async function getStaticPaths() {
+  return format((await Astro.glob('../../../content/garden/*.md'))
+    .filter((post) => !post.frontmatter.draft))
+}
+
+const { frontmatter, title, post, post: { Content } } = Astro.props;
+const headings = await post.getHeadings();
+---
+
+<Note
+  title={frontmatter?.title || title}
+  created={frontmatter?.created}
+  updated={frontmatter?.updated}
+  cover={frontmatter?.cover}
+  unlisted={frontmatter?.unlisted}
+  headings={headings}
+>
+  <Content/>
+</Note>

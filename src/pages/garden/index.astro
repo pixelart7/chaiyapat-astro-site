@@ -1,0 +1,45 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro'
+const { title } = Astro.props.frontmatter || Astro.props;
+
+import Index from '@content/garden/00 Index.md'
+import NoteProseSection from '@components/NoteProseSection.astro';
+
+import { format } from 'src/store/garden';
+import NoteCard from '@components/NoteCard.astro';
+import NoteStage from '@components/NoteStage.astro';
+
+import LogoGarden from 'src/assets/logo-garden.webp';
+
+const notes = format((await Astro.glob('../../../content/garden/*.md'))
+  .filter((post) => !post.frontmatter.draft)
+  .filter((post) => !post.frontmatter.unlisted))
+---
+
+<BaseLayout title="Chaiyapat's Garden" cover={String(new URL('ogimage-garden.jpg', Astro.site))}>
+  <div class="bg-reader dark:bg-reader-dark shadow-2xl shadow-reader dark:shadow-reader-dark ">
+    <div class="bg-gradient-to-b from-primary-100/50 via-transparent to-transparent">
+      <div class="mx-auto max-w-container">
+        <div class="pb-24 px-2">
+          <div class="max-w-container border-b border-gray-500/50 mb-20 pb-12">
+            <div class="max-w-[65ch] mx-auto pt-24">
+              <div class="h-16 mb-4"><img class="h-16" aria-hidden="true" src={LogoGarden} /></div>
+              <h1 class="font-display text-4xl font-bold">Chaiyapat's Garden</h1>
+            </div>
+          </div>
+          <NoteProseSection>
+            <Index />
+          </NoteProseSection>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto max-w-container py-12 px-2">
+      <h2 class="text-2xl font-display font-bold leading-none">All Notes <span class="text-sm font-medium opacity-70 whitespace-nowrap">Sort by last updated</span></h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3 mt-8">
+        {notes.map((n) => (
+          <NoteCard title={n.props.title} frontmatter={n.props.frontmatter} slug={n.params.slug}></NoteCard>
+        ))}
+      </div>
+    </div>
+  </div>
+</BaseLayout>

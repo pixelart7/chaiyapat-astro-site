@@ -1,0 +1,48 @@
+---
+import NoteStage from '@components/NoteStage.astro';
+
+const { title, frontmatter, slug } = Astro.props
+
+const noteStage = 0 + ((frontmatter.abstract) ? 1 : 0) + ((frontmatter.cover) ? 1 : 0)
+---
+
+<a href={`/garden/${slug}`} class={`
+  relative border rounded overflow-hidden shadow border-neutral-400/50 bg-reader dark:bg-reader-dark
+  hover:shadow-xl hover:scale-[1.01] hover:-translate-y-[2px] transition-transform duration-75
+  ${(frontmatter.cover || frontmatter.abstract) ? 'sm:row-span-2 sm:aspect-[30/31]' : 'aspect-[2/1]'}
+`}>
+  <article>
+    {frontmatter.cover && 
+      <div class="aspect-[1.91/1]">
+        <img src={frontmatter.cover} class="w-full h-full object-cover" alt={`Cover image for ${title}`}>
+      </div>
+    }
+    <div class="p-3 min-h-[8rem]">
+      <h1 class="font-bold font-display text-xl mt-2">{title}</h1>
+      {frontmatter.abstract &&
+        <div class="mt-3">
+          <blockquote class="text-sm italic opacity-60">{frontmatter.abstract}</blockquote>
+        </div>
+      }
+    </div>
+    <div class="absolute z-10 bottom-0 h-14 left-0 right-0">
+      <div class="h-4 bg-gradient-to-b from-transparent to-reader dark:to-reader-dark"></div>
+      <div class={
+        `h-10 overflow-hidden bg-neutral-200 dark:bg-neutral-800 px-3 flex items-center
+        ${(noteStage == 0) ? 'bg-neutral-100 dark:bg-neutral-900' : ''}
+        ${(noteStage == 1) ? 'bg-neutral-200 dark:bg-neutral-700' : ''}
+        ${(noteStage == 2) ? 'text-green-800 dark:text-green-300 bg-green-200 dark:bg-green-900' : ''}
+        `}>
+        <ul class="flex gap-2 items-center">
+          {noteStage > 0 && <li>
+            <NoteStage onlyIcon stage={noteStage}></NoteStage>
+          </li>}
+          {(frontmatter.updated || frontmatter.created) && <li class="leading-none">
+            <span class="text-xs opacity-50 sr-only">Created / Updated</span>
+            <div class="text-xs font-medium"><time datetime={frontmatter.updated || frontmatter.created}>{new Date(frontmatter.updated || frontmatter.created).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</time></div>
+          </li>}
+        </ul>
+      </div>
+    </div>
+  </article>
+</a>
