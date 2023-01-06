@@ -504,7 +504,6 @@ __metadata:
     "@fontsource/lora": ^4.5.12
     "@fontsource/noto-serif-thai": ^4.5.12
     "@iconify-json/fluent-emoji": ^1.1.10
-    "@iconify-json/fluent-emoji-high-contrast": ^1.1.7
     "@iconify-json/ph": ^1.1.3
     "@tailwindcss/typography": ^0.5.8
     astro: ^1.7.2
@@ -556,15 +555,6 @@ __metadata:
   version: 1.1.3
   resolution: "@gar/promisify@npm:1.1.3"
   checksum: 4059f790e2d07bf3c3ff3e0fec0daa8144fe35c1f6e0111c9921bd32106adaa97a4ab096ad7dab1e28ee6a9060083c4d1a4ada42a7f5f3f7a96b8812e2b757c1
-  languageName: node
-  linkType: hard
-
-"@iconify-json/fluent-emoji-high-contrast@npm:^1.1.7":
-  version: 1.1.7
-  resolution: "@iconify-json/fluent-emoji-high-contrast@npm:1.1.7"
-  dependencies:
-    "@iconify/types": "*"
-  checksum: a975fecf738159ea86540d90849fa44e4463a5c54fbe269d675d43409f0a1a9b0e7615831e09cfe2349003cfc4649c783022cfdb4146df0ec6c07d6b30e140f3
   languageName: node
   linkType: hard
 
@@ -5602,11 +5592,11 @@ __metadata:
 
 "typescript@patch:typescript@*#~builtin<compat/typescript>":
   version: 4.9.4
-  resolution: "typescript@patch:typescript@npm%3A4.9.4#~builtin<compat/typescript>::version=4.9.4&hash=d73830"
+  resolution: "typescript@patch:typescript@npm%3A4.9.4#~builtin<compat/typescript>::version=4.9.4&hash=ad5954"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 37f6e2c3c5e2aa5934b85b0fddbf32eeac8b1bacf3a5b51d01946936d03f5377fe86255d4e5a4ae628fd0cd553386355ad362c57f13b4635064400f3e8e05b9d
+  checksum: 1caaea6cb7f813e64345190fddc4e6c924d0b698ab81189b503763c4a18f7f5501c69362979d36e19c042d89d936443e768a78b0675690b35eb663d19e0eae71
   languageName: node
   linkType: hard
 
