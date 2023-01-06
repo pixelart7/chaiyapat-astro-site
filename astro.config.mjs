@@ -3,6 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import Icons from 'unplugin-icons/vite';
 import remarkObsidian from 'remark-obsidian';
 import remarkHeadingShift from 'remark-heading-shift';
+import remarkFigureCaption from '@microflash/remark-figure-caption'
 import slugify from 'slugify';
 
 // https://astro.build/config
@@ -15,6 +16,7 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [
     // remarkHeadingShift, // conflict with normal md files
+    remarkFigureCaption,
     () => remarkObsidian({
       titleToUrl: title => `/garden/${slugify(title, {
         lower: true

@@ -505,6 +505,7 @@ __metadata:
     "@fontsource/noto-serif-thai": ^4.5.12
     "@iconify-json/fluent-emoji": ^1.1.10
     "@iconify-json/ph": ^1.1.3
+    "@microflash/remark-figure-caption": ^1.0.0
     "@tailwindcss/typography": ^0.5.8
     astro: ^1.7.2
     remark-heading-shift: ^1.1.1
@@ -653,6 +654,19 @@ __metadata:
   version: 0.0.2
   resolution: "@ljharb/has-package-exports-patterns@npm:0.0.2"
   checksum: 348d421377c5c2e7e6ddf518800d30dbcdf3176d397fed2b214f49dd4ac3d1689701a463c7b89710ba32de63c87fc643565c9ff06aa066d49bc200b5e4b6655e
+  languageName: node
+  linkType: hard
+
+"@microflash/remark-figure-caption@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@microflash/remark-figure-caption@npm:1.0.0"
+  dependencies:
+    hast-util-whitespace: ^2.0.0
+    remark-parse: ^10.0.1
+    unified: ^10.1.2
+    unist-util-remove: ^3.1.0
+    unist-util-visit: ^4.1.0
+  checksum: c48c130f971c7972b148ebc50770ea0348d2039a1921fea0af75d9c743d2e9cc0f4dc1a3877d856aca356b2bfcdfb9f26f4a2575141c7caffa93da8c76a39fd9
   languageName: node
   linkType: hard
 
@@ -5714,6 +5728,17 @@ __metadata:
     "@types/unist": ^2.0.0
     unist-util-visit: ^4.0.0
   checksum: 7d2808662ac65f2b2f615822b78060419f738fb3b074b10cec77c596ea966b8f5c47553d2d322822a5975c49d2b21cdd64c198ae9fb02a9d54d1afa6342cdd6a
+  languageName: node
+  linkType: hard
+
+"unist-util-remove@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "unist-util-remove@npm:3.1.0"
+  dependencies:
+    "@types/unist": ^2.0.0
+    unist-util-is: ^5.0.0
+    unist-util-visit-parents: ^5.0.0
+  checksum: e7f2cb701f1d704331a6cf47c7539b6dd521f9723c628ed9a2606803b69304e12bd08746de5ac62397ee4fa0af43d0ce5545193d599ca0247c139c11228841b3
   languageName: node
   linkType: hard
 
