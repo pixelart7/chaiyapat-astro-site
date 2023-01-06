@@ -2,7 +2,7 @@
 created: "[[2023-01-01]]"
 updated: "[[2023-01-06]]"
 cover: "https://res.cloudinary.com/djtg2hopi/image/upload/v1673005223/digital-garden/cover/moving-forward.jpg"
-abstract: ""
+abstract: "Reason behind my redesign decision. What's new and what's difference."
 unlisted: false
 ---
 
