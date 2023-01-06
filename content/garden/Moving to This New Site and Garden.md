@@ -22,18 +22,11 @@ And here we are, a new place, all customized and personalized to how I liked it.
 
 # To-Do List
 
-- SEO
 - Writing sections below!
 
 # What's New
 
 # Concept of Digital Garden
-
-## So what's that
-
-## IDK!
-
-### Heading 3
 
 # My Writing Flow
 
