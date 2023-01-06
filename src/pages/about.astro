@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro"
 
+import { frontmatter as abstract } from "@content/about/01-abstract.md"
+
 import AboutSectionWeb from "@components/AboutSectionWeb.astro"
 import AboutMDProse from "@components/AboutMDProse.astro"
 import AboutIntroWeb from "@components/AboutIntroWeb.astro"
@@ -15,7 +17,7 @@ import Projects from "@content/about/06-projects.md"
 import SideProjects from "@content/about/07-side-projects.md"
 ---
 
-<BaseLayout title="Chaiyapat Tantiworachot" cover={String(new URL('ogimage-about.jpg', Astro.site))}>
+<BaseLayout title="Chaiyapat Tantiworachot" cover={String(new URL('ogimage-about.jpg', Astro.site))} description={abstract.short}>
   <div class="bg-reader dark:bg-reader-dark">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-2 p-2 max-w-container mx-auto">
       <header class="md:col-span-2">
