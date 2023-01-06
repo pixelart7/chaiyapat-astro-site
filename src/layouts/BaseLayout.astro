@@ -16,10 +16,12 @@ import Logo from '../assets/logo.svg';
 import DarkModeSelect from '@components/DarkModeSelect.svelte';
 export interface Props {
 	title: string;
+	cover?: string;
+	description?: string;
 	hideNavigation?: boolean;
 }
 
-const { title, cover, hideNavigation } = Astro.props;
+const { title, cover, description, hideNavigation } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const fallbackOgImage = new URL('ogimage.jpg', Astro.site);
@@ -43,6 +45,7 @@ const fallbackOgImage = new URL('ogimage.jpg', Astro.site);
 
     <meta property="og:title" content={title} />
     <meta property="og:type" content="profile" />
+    { description && <meta property="og:description" content={description} /> }
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={cover || fallbackOgImage} />
 

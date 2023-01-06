@@ -10,7 +10,7 @@ import PhInfoBold from '~icons/ph/info-bold'
 const { title, created, updated, cover, abstract, unlisted, headings } = Astro.props.frontmatter || Astro.props;
 ---
 
-<BaseLayout title={title} cover={cover}>
+<BaseLayout title={title} cover={cover} description={abstract}>
   <div class="bg-reader dark:bg-reader-dark shadow-2xl shadow-reader dark:shadow-reader-dark">
     <main class="mx-auto max-w-container pt-12">
       <div class="px-2">
