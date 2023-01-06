@@ -20,7 +20,7 @@ const notes = format((await Astro.glob('../../../content/garden/*.md'))
   <div class="bg-reader dark:bg-reader-dark shadow-2xl shadow-reader dark:shadow-reader-dark ">
     <div class="bg-gradient-to-b from-primary-400/10 via-transparent to-transparent">
       <div class="mx-auto max-w-container">
-        <div class="pb-24 px-2">
+        <div class="pb-24 px-4">
           <div class="max-w-container border-b border-gray-500/50 mb-20 pb-12">
             <div class="max-w-[65ch] mx-auto pt-24">
               <div class="h-16 mb-4"><img class="h-16" aria-hidden="true" src={LogoGarden} /></div>
@@ -33,7 +33,7 @@ const notes = format((await Astro.glob('../../../content/garden/*.md'))
         </div>
       </div>
     </div>
-    <div class="mx-auto max-w-container py-12 px-2">
+    <div class="mx-auto max-w-container py-12 px-4">
       <h2 class="text-2xl font-display font-bold leading-none">All Notes <span class="text-sm font-medium opacity-70 whitespace-nowrap">Sort by last updated</span></h2>
       <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3 mt-8">
         {notes.map((n) => (
