@@ -31,24 +31,25 @@ const { title, created, updated, cover, abstract, unlisted, headings } = Astro.p
             <h1 class="font-display text-4xl font-bold">{title}</h1>
             <ul class="flex gap-3 mt-6">
               <li class="group">
-                <span class="text-xs opacity-50 inline-flex items-center">
+                <span class="text-xs opacity-75 inline-flex items-center">
                   Stage
-                  <a href="/garden/stages-of-my-note" class="opacity-0 group-hover:opacity-50 inline-flex ml-1 items-center hover:text-primary-700 dark:hover:text-primary-500" alt="Information about stages">
-                    <PhInfoBold></PhInfoBold>
+                  <a href="/garden/stages-of-my-note" class="opacity-0 group-hover:opacity-50 inline-flex ml-1 items-center hover:text-primary-700 dark:hover:text-primary-500">
+                    <PhInfoBold aria-hidden="true"></PhInfoBold>
+                    <span class="sr-only">Information about stage</span>
                   </a>
                 </span>
                 <NoteStage stage={0 + ((abstract) ? 1 : 0) + ((cover) ? 1 : 0)}></NoteStage>
               </li>
               {(created) && <li>
-                <span class="text-xs opacity-50">Created</span>
+                <span class="text-xs opacity-75">Created</span>
                 <div class="text-sm font-medium"><time datetime={created}>{new Date(created).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</time></div>
               </li>}
               {(updated) && <li>
-                <span class="text-xs opacity-50">Updated</span>
+                <span class="text-xs opacity-75">Updated</span>
                 <div class="text-sm font-medium"><time datetime={updated}>{new Date(updated).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</time></div>
               </li>}
               {(unlisted) && <li>
-                <span class="text-xs opacity-50">Publicity</span>
+                <span class="text-xs opacity-75">Publicity</span>
                 <div class="text-sm font-medium">Unlisted</div>
               </li>}
             </ul>
