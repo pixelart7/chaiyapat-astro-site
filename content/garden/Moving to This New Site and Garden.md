@@ -1,7 +1,7 @@
 ---
 created: "[[2023-01-01]]"
-updated: ""
-cover: ""
+updated: "[[2023-01-06]]"
+cover: "https://res.cloudinary.com/djtg2hopi/image/upload/v1673005223/digital-garden/cover/moving-forward.jpg"
 abstract: ""
 unlisted: false
 ---

@@ -1,14 +1,12 @@
 ---
 created: "[[2023-01-01]]"
 updated: ""
-cover: ""
+cover: "https://res.cloudinary.com/djtg2hopi/image/upload/v1672973381/digital-garden/attachments/note-stages.jpg"
 abstract: ""
 unlisted: false
 ---
 
 To help me bring notes out as easily as possible, I adopt and adapt the concept of evergreen note-writing. For me, I always feel like I have to carefully read through everything ten or a thousand times before I feel confident enough to release my notes. This system allows me to tell the readers that some notes are literally just my notes, there might be grammatical errors (as I'm not a native English speaker,) and ideas might not be concrete, but those are something that I want to publish.
-
-![Three stages of my note](https://res.cloudinary.com/djtg2hopi/image/upload/v1672973381/digital-garden/attachments/note-stages.jpg)
 
 There are three stages:
 1. Note – The simplest form of my note, contains small things, small ideas, that might grow later.
