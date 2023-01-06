@@ -29,7 +29,7 @@ module.exports = {
 					'900': '#076779'
 				},
 				reader: '#FFFAF8',
-				'reader-dark': '#08090b',
+				'reader-dark': '#18191A',
 			}
 		},
 	},

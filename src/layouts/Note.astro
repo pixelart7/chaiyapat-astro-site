@@ -15,7 +15,9 @@ const { title, created, updated, cover, abstract, unlisted, headings } = Astro.p
     <main class="mx-auto max-w-container pt-12">
       <div class="px-2">
         <div class="max-w-[65ch] mx-auto">
-          <a href="/garden" class="text-sm hover:opacity-75">← Garden Home <img aria-hidden="true" src={LogoGarden} class="inline w-4 mb-1"></a>
+          <a href="/garden" class="text-sm p-1 hover:bg-primary-500/10 rounded -mx-1">
+            ← Garden Home <img aria-hidden="true" src={LogoGarden} class="inline w-4 mb-1">
+          </a>
         </div>
       </div>
       { (cover) &&
