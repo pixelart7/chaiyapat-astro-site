@@ -31,5 +31,6 @@
     "remark-obsidian": "^1.4.0",
     "slugify": "^1.6.5",
     "unplugin-icons": "^0.14.15"
-  }
+  },
+  "packageManager": "yarn@3.3.1"
 }
