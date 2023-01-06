@@ -50,7 +50,10 @@ const fallbackOgImage = new URL('ogimage.jpg', Astro.site);
 
     <meta property="og:title" content={title} />
     <meta property="og:type" content="website" />
-    { description && <meta property="og:description" content={description} /> }
+    { description &&
+			<meta property="og:description" content={description} />
+			<meta name="description" content={description} />
+		}
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={cover || fallbackOgImage} />
 
@@ -74,12 +77,12 @@ const fallbackOgImage = new URL('ogimage.jpg', Astro.site);
 				<nav class="max-w-container mx-auto px-3 sm:py-1">
 					<ul class="flex items-center font-bold text-lg pr-1 sm:pr-0 gap-1 sm:gap-2">
 						<li>
-							<a class="h-12 sm:h-14 flex leading-none hover:opacity-90 items-center p-2 sm:p-3 sm:mt-1 hover:bg-primary-500/10 rounded" href="/">
+							<a class="h-12 sm:h-14 flex leading-none hover:opacity-90 items-center p-2 sm:p-3 sm:mt-1 hover:bg-primary-500/10 rounded" href="/" aria-label="Home Page">
 								<img class="w-6 sm:w-8" src={Logo} alt="PIX7 Logo" />
 								<span class="hidden sm:block font-display text-xl self-end leading-3 ml-1">PIX7<br/><span class="text-sm leading-3 opacity-50">Chaiyapat</span></span>
 							</a>
 						</li>
-						<div class="flex-1"></div>
+						<li class="flex-1 not-sr-only"></li>
 						<li>
 							<a class="leading-none flex items-center p-2 lowercase hover:bg-primary-500/10 rounded" href="/about">
 								About

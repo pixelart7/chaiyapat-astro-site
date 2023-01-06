@@ -15,9 +15,9 @@ const email = btoa(profile.contact.email);
   <div class="p-3 sm:pt-4 sm:pb-6 sm:px-6 dark:text-gray-200 font-display">
     <div class="pt-2">
       <div class="flex">
-        <img class="rounded-full w-20 h-20" src={ProfileImage} />
+        <img class="rounded-full w-20 h-20" src={ProfileImage} alt="Chaiyapat's Image" />
         <div class="flex-1"></div>
-        <a href="/card"><img class="w-20 h-20 dark:p-1 dark:bg-white dark:rounded" aria-hidden="true" src={QRImage} /></a>
+        <a href="/card" aria-hidden="true" class="not-sr-only"><img class="w-20 h-20 dark:p-1 dark:bg-white dark:rounded" src={QRImage} /></a>
       </div>
       <div class="mt-4 md:flex">
         <div>
@@ -34,7 +34,7 @@ const email = btoa(profile.contact.email);
             </li>
             {profile.contact.links.map((link) => (
               <li class="h-6">
-                <span class="text-gray-400 mr-2 font-light inline-block w-16 md:w-auto" aria-hidden="true">{link[1]}.</span>
+                <span class="text-gray-600 mr-2 font-light inline-block w-16 md:w-auto" aria-hidden="true">{link[1]}.</span>
                 <span class="sr-only">{link[0]}: </span>
                 <span class="font-medium">
                   <a class="underline hover:opacity-75" href={`https://${link[2]}`}>{link[2]}</a>
@@ -46,8 +46,8 @@ const email = btoa(profile.contact.email);
       </div>
     </div>
   </div>
-  <div class="bg-gray-500/10 py-3 px-3 sm:px-6 text-xs text-gray-500/70 print:hidden transition-colors duration-100 hover:text-gray-500 font-display">
-    <h4 class="inline font-medium mr-1 after:content-[':']">Alias / Affiliation</h4>
+  <div class="bg-gray-500/10 py-3 px-3 sm:px-6 text-xs text-gray-700/70 print:hidden transition-colors duration-100 font-display">
+    <h2 class="inline font-medium mr-1 after:content-[':']">Alias / Affiliation</h4>
     <div class="inline">{profile.aliasesAndAffiliation.join(', ')}</div>
   </div>
 </CVSectionWeb>
