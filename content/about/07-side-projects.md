@@ -4,7 +4,7 @@
 
 **Ongoing Hobby**
 
-![Image of my e-ink display](https://res.cloudinary.com/djtg2hopi/image/upload/v1672974648/digital-garden/portfolio/home-ambient-display.jpg "Home Ambient Display")
+![Image of my e-ink display](https://res.cloudinary.com/dhmwreddz/image/upload/v1673076026/digital-garden/portfolio/home-ambient-display.jpg "Home Ambient Display")
 
 In my free time, I work on my cloud for self-hosting applications and the integration of various IoT devices. I have several servers on the cloud and a Raspberry Pi running as a home server, both are just for fun. On the cloud, I setup the majority of applications using Docker, apply security with VPN and firewall.
 
@@ -18,7 +18,7 @@ I helped my friend chaisiam at [PlearnGaming](https://www.youtube.com/@PlearnGam
 
 **2019**
 
-![Image of this project](https://res.cloudinary.com/djtg2hopi/image/upload/v1672974648/digital-garden/portfolio/to.jpg)
+![Image of this project](https://res.cloudinary.com/dhmwreddz/image/upload/v1673076026/digital-garden/portfolio/to.jpg)
 
 An educational link shortener service that I built in order to learn AMP framework.
 
@@ -29,7 +29,7 @@ An educational link shortener service that I built in order to learn AMP framewo
 
 **2019**
 
-![Image of this project](https://res.cloudinary.com/djtg2hopi/image/upload/v1672974648/digital-garden/portfolio/gimme.jpg)
+![Image of this project](https://res.cloudinary.com/dhmwreddz/image/upload/v1673076026/digital-garden/portfolio/gimme.jpg)
 
 Designed and built a simple application built on Vue with PWA for generating a PromptPay QR code with the desired amount of money.
 
@@ -40,7 +40,7 @@ Designed and built a simple application built on Vue with PWA for generating a P
 
 **2018**
 
-![Image of this project](https://res.cloudinary.com/djtg2hopi/image/upload/v1672974648/digital-garden/portfolio/lyrics.jpg)
+![Image of this project](https://res.cloudinary.com/dhmwreddz/image/upload/v1673076026/digital-garden/portfolio/lyrics.jpg)
 
 Designed and developed a web-based application on Vue with PWA for storing lyrics in two languages. The app is built with LocalStorage.js where all data are stored on the user's Google Drive.
 
@@ -51,7 +51,7 @@ Designed and developed a web-based application on Vue with PWA for storing lyric
 
 **2018**
 
-![Image of this project](https://res.cloudinary.com/djtg2hopi/image/upload/v1672974648/digital-garden/portfolio/hon.jpg)
+![Image of this project](https://res.cloudinary.com/dhmwreddz/image/upload/v1673076026/digital-garden/portfolio/hon.jpg)
 
 Designed and developed a web-based application on Vue with PWA for storing book vocabulary in Japanese and English. Words are separated by section and chapters with an additional API calls to Japanese-English dictionary.
 

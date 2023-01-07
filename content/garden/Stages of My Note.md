@@ -1,7 +1,7 @@
 ---
 created: "[[2023-01-01]]"
 updated: ""
-cover: "https://res.cloudinary.com/djtg2hopi/image/upload/v1672973381/digital-garden/attachments/note-stages.jpg"
+cover: "https://res.cloudinary.com/dhmwreddz/image/upload/v1673076025/digital-garden/cover/note-stages.jpg"
 abstract: ""
 unlisted: false
 ---

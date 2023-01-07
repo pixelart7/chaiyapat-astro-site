@@ -1,7 +1,7 @@
 ---
 created: "[[2023-01-01]]"
 updated: "[[2023-01-06]]"
-cover: "https://res.cloudinary.com/djtg2hopi/image/upload/v1673005223/digital-garden/cover/moving-forward.jpg"
+cover: "https://res.cloudinary.com/dhmwreddz/image/upload/v1673076025/digital-garden/cover/moving-forward.jpg"
 abstract: "Reasons behind my redesign decision. What's new and what's changed."
 unlisted: false
 ---
@@ -46,7 +46,7 @@ Ps. You may notice that some of those links aren't working (leads to the Not Fou
 
 Some of the technical aspects of my previous site and this one.
 
-![Comparison of my old and new website](https://res.cloudinary.com/djtg2hopi/image/upload/v1673002759/digital-garden/attachments/old-vs-new.jpg)
+![Comparison of my old and new website](https://res.cloudinary.com/dhmwreddz/image/upload/v1673076027/digital-garden/attachments/old-vs-new.jpg)
 
 ## Old Site
 
