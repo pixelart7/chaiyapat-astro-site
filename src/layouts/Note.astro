@@ -97,21 +97,8 @@ const styleForNonExistedOutgoing = nonExistOutgoing.map((slug) => `
       <div class="mx-auto max-w-container px-4">
         <div class="border-t border-gray-500/50 py-12">
           <div class="mx-auto max-w-[65ch] ">
-            <h1 class="text-sm opacity-75 mb-3 font-display">Related Notes</h1>
+            <h1 class="text-sm opacity-75 mb-3 font-display font-bold" id="related-notes">Related Notes</h1>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 gap-y-6">
-              { node.outgoing.length > 0 &&
-                <div>
-                  <h2 class="text-xs opacity-75 font-display">Outgoing Links</h2>
-                  <ul class="space-y-1 mt-2">
-                    { node.outgoing.map((o) =>
-                        <li>
-                          <NoteCardSmall slug={o.slug} title={o.title} abstract={o.abstract} isExist={o.isExist} ></NoteCardSmall>
-                        </li>
-                      )
-                    }
-                  </ul>
-                </div>
-              }
               { node.incoming.length > 0 &&
                 <div>
                   <h2 class="text-xs opacity-75 font-display">Backlinks</h2>
@@ -119,6 +106,19 @@ const styleForNonExistedOutgoing = nonExistOutgoing.map((slug) => `
                     { node.incoming.map((o) =>
                         <li>
                           <NoteCardSmall slug={o.slug} title={o.title} abstract={o.abstract} isExist={true} ></NoteCardSmall>
+                        </li>
+                      )
+                    }
+                  </ul>
+                </div>
+              }
+              { node.outgoing.length > 0 &&
+                <div>
+                  <h2 class="text-xs opacity-75 font-display">Outgoing Links</h2>
+                  <ul class="space-y-1 mt-2">
+                    { node.outgoing.map((o) =>
+                        <li>
+                          <NoteCardSmall slug={o.slug} title={o.title} abstract={o.abstract} isExist={o.isExist} ></NoteCardSmall>
                         </li>
                       )
                     }
