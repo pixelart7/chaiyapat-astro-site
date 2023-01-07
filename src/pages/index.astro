@@ -1,9 +1,46 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro"
+import GreetingTagline from '@components/GreetingTagline.svelte';
+import PhArrowRightBold from '~icons/ph/arrow-right-bold'
+
+import FaceUwU from '../assets/face-uwu.png';
 ---
 
 <BaseLayout title="Chaiyapat Tantiworachot">
-  <script>
-    window.location.href = '/about'
-  </script>
+  <div class="">
+    <div class="min-h-[420px] sm:min-h-[460px] pt-24 sm:pt-36 pb-16 px-4 max-w-container mx-auto">
+      <div class="font-display">
+        <div class="h-12 mb-4"><img class="h-12" aria-hidden="true" src={FaceUwU} /></div>
+        <h1 class="text-4xl font-bold">Welcome to the home of PIX7</h1>
+        <GreetingTagline client:only="svelte"></GreetingTagline>
+      </div>
+    </div>
+    <div class="max-w-container mx-auto px-4 pb-12 font-display">
+      <div class="max-w-[300px]">
+        <ul class="space-y-3">
+          <li>
+            <a href="/about" class="border px-3 py-2 block rounded shadow border-neutral-400/50 bg-reader dark:bg-reader-dark hover:bg-neutral-500/10 dark:hover:bg-neutral-100/10">
+              <article>
+                <div class="grid grid-cols-[1fr_32px]">
+                  <div class="font-bold leading-tight">About me</div>
+                  <div class="flex items-center justify-end text-primary-700"><PhArrowRightBold></PhArrowRightBold></div>
+                </div>
+              </article>
+            </a>
+          </li>
+          <li>
+            <a href="/garden" class="border px-3 py-2 block rounded shadow border-neutral-400/50 bg-reader dark:bg-reader-dark hover:bg-neutral-500/10 dark:hover:bg-neutral-100/10">
+              <article>
+                <div class="grid grid-cols-[1fr_32px]">
+                  <div class="font-bold leading-tight">Digital garden</div>
+                  <div class="flex items-center justify-end text-primary-700"><PhArrowRightBold></PhArrowRightBold></div>
+                </div>
+                <blockquote class="text-sm opacity-75 mt-1">My posts, notes, and stuff</blockquote>
+              </article>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </BaseLayout>

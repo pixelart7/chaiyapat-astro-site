@@ -16,7 +16,7 @@ const { title, abstract, slug, isExist } = Astro.props
       <article>
         <h1 class="font-medium font-display text-base">
           {title}
-          <PreviouslyVisitedIcon client:only slug={slug}></PreviouslyVisitedIcon>
+          <PreviouslyVisitedIcon client:only="svelte" slug={slug}></PreviouslyVisitedIcon>
         </h1>
         {abstract &&
           <div>
