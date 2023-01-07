@@ -6,8 +6,22 @@ import BaseLayout from './BaseLayout.astro'
 import LogoGarden from 'src/assets/logo-garden.webp';
 
 import PhInfoBold from '~icons/ph/info-bold'
+import NoteCardSmall from '@components/NoteCardSmall.astro';
 
-const { title, created, updated, cover, abstract, unlisted, headings } = Astro.props.frontmatter || Astro.props;
+const { title, created, updated, cover, abstract, unlisted, headings, node } = Astro.props.frontmatter || Astro.props;
+
+const nonExistOutgoing = node.outgoing.filter((o) => !o.isExist).map((o) => o.slug)
+
+// HACK: Dirty way / non-accessible way to disable non-existing link out
+const styleForNonExistedOutgoing = nonExistOutgoing.map((slug) => `
+  a[href="/garden/${slug}"] {
+    opacity: 0.75;
+    text-decoration-style: dashed;
+  }
+  a[href="/garden/${slug}"]:hover {
+    opacity: 0.5;
+  }
+`).join('\n')
 ---
 
 <BaseLayout title={title} cover={cover} description={abstract}>
@@ -74,10 +88,47 @@ const { title, created, updated, cover, abstract, unlisted, headings } = Astro.p
             </ul>
           </details>
         }
-        <NoteProseSection>
+        <NoteProseSection style={styleForNonExistedOutgoing}>
           <slot />
         </NoteProseSection>
       </article>
     </main>
+    { (node.outgoing.length > 0 || node.incoming.length > 0) && 
+      <div class="mx-auto max-w-container px-4">
+        <div class="border-t border-gray-500/50 py-12">
+          <div class="mx-auto max-w-[65ch] ">
+            <h1 class="text-sm opacity-75 mb-2 font-display">Related Notes</h1>
+            <div class="grid grid-cols-2 gap-3">
+              { node.outgoing.length > 0 &&
+                <div>
+                  <h2 class="text-xs opacity-75 font-display">Outgoing Links</h2>
+                  <ul class="space-y-1 mt-2">
+                    { node.outgoing.map((o) =>
+                        <li>
+                          <NoteCardSmall slug={o.slug} title={o.title} abstract={o.abstract} isExist={o.isExist} ></NoteCardSmall>
+                        </li>
+                      )
+                    }
+                  </ul>
+                </div>
+              }
+              { node.incoming.length > 0 &&
+                <div>
+                  <h2 class="text-xs opacity-75 font-display">Backlinks</h2>
+                  <ul class="space-y-1 mt-2">
+                    { node.incoming.map((o) =>
+                        <li>
+                          <NoteCardSmall slug={o.slug} title={o.title} abstract={o.abstract} isExist={true} ></NoteCardSmall>
+                        </li>
+                      )
+                    }
+                  </ul>
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    }
   </div>
 </BaseLayout>

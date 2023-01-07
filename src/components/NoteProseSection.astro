@@ -1,3 +1,8 @@
+---
+const { style } = Astro.props
+---
+
+<style is:inline set:html={style}></style>
 <section class="
   prose mx-auto dark:prose-invert font-essay
   prose-a:text-primary-900 dark:prose-a:text-primary-300
@@ -7,6 +12,7 @@
   prose-figure:-mx-4 md:prose-figure:-mx-8 sm:prose-figure:mx-0
   prose-h1:border-b prose-h1:pb-2 prose-h1:border-gray-500/40
   prose-h1:text-2xl prose-h2:text-xl prose-h3:text-lg prose-h4:text-lg prose-h5:text-lg prose-h6:text-lg
-">
+"
+>
   <slot />
 </section>

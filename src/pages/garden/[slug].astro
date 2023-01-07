@@ -1,14 +1,17 @@
 ---
 import Note from '@layouts/Note.astro'
 
-import { format } from 'src/store/garden';
+import { format, buildGraph } from 'src/store/garden';
 
 export async function getStaticPaths() {
-  return format((await Astro.glob('../../../content/garden/*.md'))
-    .filter((post) => !post.frontmatter.draft))
+  return buildGraph(
+      format((await Astro.glob('../../../content/garden/*.md'))
+        .filter((post) => !post.frontmatter.draft)
+      )
+    )
 }
 
-const { frontmatter, title, post, post: { Content } } = Astro.props;
+const { frontmatter, title, post, post: { Content }, node } = Astro.props;
 const headings = await post.getHeadings();
 ---
 
@@ -19,6 +22,7 @@ const headings = await post.getHeadings();
   cover={frontmatter?.cover}
   abstract={frontmatter?.abstract}
   unlisted={frontmatter?.unlisted}
+  node={node}
   headings={headings}
 >
   <Content/>
