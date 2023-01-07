@@ -506,6 +506,7 @@ __metadata:
     "@iconify-json/fluent-emoji": ^1.1.10
     "@iconify-json/ph": ^1.1.3
     "@microflash/remark-figure-caption": ^1.0.0
+    "@tailwindcss/line-clamp": ^0.4.2
     "@tailwindcss/typography": ^0.5.8
     astro: ^1.7.2
     cheerio: ^1.0.0-rc.12
@@ -774,6 +775,15 @@ __metadata:
     svelte: ^3.44.0
     vite: ^3.0.0
   checksum: a5bb66fbf3bba7a9f1a21e66e2b3daed548f0b465c082c83cd4473035139b1defc82de20fc6e841ec5061e92a818249bd90ef997f73b6cd4afc9299aaf5b179c
+  languageName: node
+  linkType: hard
+
+"@tailwindcss/line-clamp@npm:^0.4.2":
+  version: 0.4.2
+  resolution: "@tailwindcss/line-clamp@npm:0.4.2"
+  peerDependencies:
+    tailwindcss: ">=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1"
+  checksum: 26b8135df24fff51c3d3790ae795bdc12bc4a7113fa22dcab80568ae6ee00710e2ed4154048958c472bb654061f0f1573b7ac5e004ae6222cbd5ac6fcf199478
   languageName: node
   linkType: hard
 

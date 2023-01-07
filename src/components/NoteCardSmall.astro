@@ -15,7 +15,7 @@ const { title, abstract, slug, isExist } = Astro.props
         <h1 class="font-medium font-display text-base">{title}</h1>
         {abstract &&
           <div>
-            <blockquote class="text-xs italic opacity-60">{abstract}</blockquote>
+            <blockquote class="text-xs italic opacity-60 line-clamp-2">{abstract}</blockquote>
           </div>
         }
       </article>

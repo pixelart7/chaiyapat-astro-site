@@ -26,6 +26,7 @@
     "@iconify-json/fluent-emoji": "^1.1.10",
     "@iconify-json/ph": "^1.1.3",
     "@microflash/remark-figure-caption": "^1.0.0",
+    "@tailwindcss/line-clamp": "^0.4.2",
     "@tailwindcss/typography": "^0.5.8",
     "cheerio": "^1.0.0-rc.12",
     "remark-heading-shift": "^1.1.1",
