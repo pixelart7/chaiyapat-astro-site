@@ -38,7 +38,7 @@ My previous site is blasted (and blessed, in my personal opinion :P) with light-
 
 ## Digital Garden
 
-As I mentioned earlier, I will use this space to share my thoughts. Previously, my thoughts have nowhere to go because I was afraid of publishing a non-perfect article. But no more, I adopt the idea of evergreen notes to help me ease those fear. Read more on this at [[Stages of My Note]] and [[My Version of Digital Garden]]. In the future, I want to share more on [[My Writing Flow]], how I consume content, and write something in Obsidian.
+As I mentioned earlier, I will use this space to share my thoughts. Previously, my thoughts have nowhere to go because I was afraid of publishing a non-perfect article. But no more, I adopt the idea of evergreen notes to help me ease those fear. Read more on this at [[Stages of My Note]] and [[I Finally Understand Obsidian (My Takes on Second Brain and Digital Garden)]]. In the future, I want to share more on [[My Writing Flow]], how I consume content, and write something in Obsidian.
 
 Ps. You may notice that some of those links aren't working (leads to the Not Found page) because I haven't written/created those pages yet. But it is a signal for me to write them in the future.
 
