@@ -24,7 +24,7 @@ const styleForNonExistedOutgoing = nonExistOutgoing.map((slug) => `
 `).join('\n')
 ---
 
-<BaseLayout title={title} cover={cover} description={abstract}>
+<BaseLayout title={title} cover={cover || String(new URL('ogimage-note.png', Astro.site))} description={abstract}>
   <div class="bg-reader dark:bg-reader-dark shadow-2xl shadow-reader dark:shadow-reader-dark">
     <main class="mx-auto max-w-container pt-6 sm:pt-12">
       <div class="px-4">
