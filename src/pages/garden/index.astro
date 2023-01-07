@@ -16,7 +16,7 @@ const notes = format((await Astro.glob('../../../content/garden/*.md'))
   .filter((post) => !post.frontmatter.unlisted))
 ---
 
-<BaseLayout title="Chaiyapat's Garden" cover={String(new URL('ogimage-garden.jpg', Astro.site))} description="Welcome to my digital garden. This is where I share my notes.">
+<BaseLayout title="Chaiyapat's Garden" cover={String(new URL('ogimage-garden.png', Astro.site))} description="Welcome to my digital garden. This is where I share my notes.">
   <div class="bg-reader dark:bg-reader-dark shadow-2xl shadow-reader dark:shadow-reader-dark ">
     <div class="bg-gradient-to-b from-primary-400/10 via-transparent to-transparent">
       <div class="mx-auto max-w-container">
