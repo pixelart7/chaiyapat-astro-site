@@ -4,6 +4,7 @@ const { style } = Astro.props
 
 <style is:inline set:html={style}></style>
 <section class="
+  note-prose
   prose mx-auto dark:prose-invert font-essay
   prose-a:text-primary-900 dark:prose-a:text-primary-300
   hover:prose-a:opacity-75
@@ -17,3 +18,10 @@ const { style } = Astro.props
 >
   <slot />
 </section>
+
+<style is:global>
+  section.note-prose ul li > p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+</style>
