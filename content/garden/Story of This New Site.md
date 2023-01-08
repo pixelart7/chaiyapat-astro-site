@@ -3,7 +3,6 @@ created: "[[2023-01-01]]"
 updated: "[[2023-01-06]]"
 cover: "https://res.cloudinary.com/dhmwreddz/image/upload/v1673076025/digital-garden/cover/moving-forward.jpg"
 abstract: "Reasons behind my redesign decision. What's new and what's changed."
-unlisted: false
 ---
 
 Ever since I started web development, I've been through so many blogging platforms. Most of them I deployed to learn the ins and outs of deploying something. I think I started with WordPress. After a while, I moved to Ghost on the cloud, which I spent using lunch money. Then Medium arrived, I secured a domain `blog.pix7.me` while it was free to do so. But I've never written anything routinely.
