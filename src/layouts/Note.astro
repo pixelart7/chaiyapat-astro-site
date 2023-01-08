@@ -42,6 +42,16 @@ const styleForNonExistedOutgoing = nonExistOutgoing.map((slug) => `
       <article class="pb-12 px-4">
         <div class="max-w-container border-b border-gray-500/50 mb-12 pb-12">
           <header class="max-w-[65ch] mx-auto pt-8">
+            {
+              node.upperDirs.length > 0 &&
+              <ul class="font-display text-sm opacity-60 font-medium mb-1">
+                {
+                  node.upperDirs.map((ud, i) => 
+                    <li class="inline">{ ud.isExist ? <a class="underline hover:opacity-75" href={`/garden/${ud.slug}`}>{ud.name}</a> : <span>{ud.name}</span> }<span class="opacity-75"> /</span></li>
+                  )
+                }
+              </ul>
+            }
             <h1 class="font-display text-4xl font-bold">{title}</h1>
             <ul class="flex gap-3 mt-6">
               <li class="group">
@@ -105,7 +115,7 @@ const styleForNonExistedOutgoing = nonExistOutgoing.map((slug) => `
                   <ul class="space-y-1 mt-2">
                     { node.incoming.map((o) =>
                         <li>
-                          <NoteCardSmall slug={o.slug} title={o.title} abstract={o.abstract} isExist={true} ></NoteCardSmall>
+                          <NoteCardSmall slug={o.slug} title={o.title} abstract={o.abstract} isExist={true}></NoteCardSmall>
                         </li>
                       )
                     }
@@ -118,7 +128,7 @@ const styleForNonExistedOutgoing = nonExistOutgoing.map((slug) => `
                   <ul class="space-y-1 mt-2">
                     { node.outgoing.map((o) =>
                         <li>
-                          <NoteCardSmall slug={o.slug} title={o.title} abstract={o.abstract} isExist={o.isExist} ></NoteCardSmall>
+                          <NoteCardSmall slug={o.slug} title={o.title} abstract={o.abstract} isExist={o.isExist}></NoteCardSmall>
                         </li>
                       )
                     }

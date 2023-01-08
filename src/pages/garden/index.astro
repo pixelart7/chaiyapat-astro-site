@@ -5,13 +5,13 @@ const { title } = Astro.props.frontmatter || Astro.props;
 import Index from '@content/garden/00 Index.md'
 import NoteProseSection from '@components/NoteProseSection.astro';
 
-import { format } from 'src/store/garden';
+import { format } from 'src/garden';
 import NoteCard from '@components/NoteCard.astro';
 import NoteStage from '@components/NoteStage.astro';
 
 import LogoGarden from 'src/assets/logo-garden.webp';
 
-const notes = format((await Astro.glob('../../../content/garden/*.md'))
+const notes = format((await Astro.glob('../../../content/garden/**/*.md'))
   .filter((post) => !post.frontmatter.draft)
   .filter((post) => !post.frontmatter.unlisted))
 ---

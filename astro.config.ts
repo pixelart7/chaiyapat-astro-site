@@ -5,6 +5,7 @@ import remarkObsidian from 'remark-obsidian';
 import remarkHeadingShift from 'remark-heading-shift';
 import remarkFigureCaption from '@microflash/remark-figure-caption'
 import slugify from 'slugify';
+import { getContentMdFileList, helperDirsAndFile, generatePathSlug } from './src/garden.ts'
 
 // https://astro.build/config
 import svelte from "@astrojs/svelte";
@@ -17,11 +18,20 @@ export default defineConfig({
     remarkPlugins: [
     // remarkHeadingShift, // conflict with normal md files
     remarkFigureCaption,
-    () => remarkObsidian({
-      titleToUrl: title => `/garden/${slugify(title, {
-        lower: true
-      })}`
-    })],
+    () => {
+      const mdFileList = getContentMdFileList();
+
+      return remarkObsidian({
+        titleToUrl: (title) => {
+          const index = mdFileList.findIndex(mdPath => mdPath.includes(title));
+          if (index !== -1) {
+            const { dir, filename } = helperDirsAndFile(mdFileList[index]);
+            return `/garden/${generatePathSlug(dir, filename)}`;
+          }
+          return `/garden/${generatePathSlug('', title)}`;
+        }})
+      }
+    ],
     extendDefaultPlugins: true
   },
   vite: {

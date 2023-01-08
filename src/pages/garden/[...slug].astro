@@ -1,11 +1,11 @@
 ---
 import Note from '@layouts/Note.astro'
 
-import { format, buildGraph } from 'src/store/garden';
+import { format, buildGraph } from 'src/garden';
 
 export async function getStaticPaths() {
   return buildGraph(
-      format((await Astro.glob('../../../content/garden/*.md'))
+      format((await Astro.glob('../../../content/garden/**/*.md'))
         .filter((post) => !post.frontmatter.draft)
       )
     )

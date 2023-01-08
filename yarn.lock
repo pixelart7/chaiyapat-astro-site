@@ -510,6 +510,7 @@ __metadata:
     "@tailwindcss/typography": ^0.5.8
     astro: ^1.7.2
     cheerio: ^1.0.0-rc.12
+    recursive-readdir-sync: ^1.0.6
     remark-heading-shift: ^1.1.1
     remark-obsidian: ^1.4.0
     slugify: ^1.6.5
@@ -4823,6 +4824,13 @@ __metadata:
     source-map: ~0.6.1
     tslib: ^2.0.1
   checksum: 14c35115cd9965950724cb2968f069a247fa79ce890643ab6dc3795c705b363f7b92a45238e9f765387c306763be9955f72047bb9d15b5d60b0a55f9e7912d5a
+  languageName: node
+  linkType: hard
+
+"recursive-readdir-sync@npm:^1.0.6":
+  version: 1.0.6
+  resolution: "recursive-readdir-sync@npm:1.0.6"
+  checksum: c0228ccef71729079c8166a36311823de0c5b9501ab27fb169ca27918d87b5244aea9df3ace8cbf1c9d1f287010e62a928b3c4c47f5cafdb2f79848b5162596f
   languageName: node
   linkType: hard
 
