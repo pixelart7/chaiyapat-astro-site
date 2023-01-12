@@ -1,9 +1,9 @@
 ---
-const { style } = Astro.props
+const { style, classes } = Astro.props
 ---
 
 <style is:inline set:html={style}></style>
-<section class="
+<section class={`
   note-prose
   prose mx-auto dark:prose-invert font-essay
   prose-a:text-primary-900 dark:prose-a:text-primary-300
@@ -14,7 +14,8 @@ const { style } = Astro.props
   prose-figure:-mx-4 md:prose-figure:-mx-8 sm:prose-figure:mx-0
   prose-h1:border-b prose-h1:pb-2 prose-h1:border-gray-500/40
   prose-h1:text-2xl prose-h2:text-xl prose-h3:text-lg prose-h4:text-lg prose-h5:text-lg prose-h6:text-lg
-"
+  ${classes}
+`}
 >
   <slot />
 </section>
@@ -23,5 +24,9 @@ const { style } = Astro.props
   section.note-prose ul li > p {
     margin-top: 0;
     margin-bottom: 0;
+  }
+
+  section.note-prose.note-dir-ttrpg, section.note-prose.note-file-ttrpg {
+    @apply prose-p:font-sans;
   }
 </style>
