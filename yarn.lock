@@ -511,6 +511,7 @@ __metadata:
     astro: ^1.7.2
     cheerio: ^1.0.0-rc.12
     recursive-readdir-sync: ^1.0.6
+    remark-breaks: ^3.0.2
     remark-heading-shift: ^1.1.1
     remark-obsidian: ^1.4.0
     slugify: ^1.6.5
@@ -4877,6 +4878,17 @@ __metadata:
     rehype-stringify: ^9.0.0
     unified: ^10.0.0
   checksum: 08174db96f2d8d3543266ed36368e66ae050698b989498e1987f645f500606dcae946265341c87041d7db8d21927f686029792df116e9fd293c46b02a779869a
+  languageName: node
+  linkType: hard
+
+"remark-breaks@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "remark-breaks@npm:3.0.2"
+  dependencies:
+    "@types/mdast": ^3.0.0
+    unified: ^10.0.0
+    unist-util-visit: ^4.0.0
+  checksum: 5f46b18818f8a77e4fbc607c99736eedbe1f8cbad3d7390ce8359f08e3b749de8778ec8812287a41f51ffef2524b0be0dd623fcdbcda5de7f13f9902851f80b3
   languageName: node
   linkType: hard
 

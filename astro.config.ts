@@ -3,6 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import Icons from 'unplugin-icons/vite';
 import remarkObsidian from 'remark-obsidian';
 import remarkHeadingShift from 'remark-heading-shift';
+import remarkBreaks from 'remark-breaks';
 import remarkFigureCaption from '@microflash/remark-figure-caption'
 import slugify from 'slugify';
 import { getContentMdFileList, helperDirsAndFile, generatePathSlug } from './src/garden.ts'
@@ -17,6 +18,7 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [
     // remarkHeadingShift, // conflict with normal md files
+    remarkBreaks,
     remarkFigureCaption,
     () => {
       const mdFileList = getContentMdFileList();

@@ -30,6 +30,7 @@
     "@tailwindcss/line-clamp": "^0.4.2",
     "@tailwindcss/typography": "^0.5.8",
     "cheerio": "^1.0.0-rc.12",
+    "remark-breaks": "^3.0.2",
     "remark-heading-shift": "^1.1.1",
     "remark-obsidian": "^1.4.0",
     "slugify": "^1.6.5",
