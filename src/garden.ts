@@ -83,7 +83,7 @@ export function buildGraph(formattedGarden) {
     $('a').each((_, a) => {
       if ($(a).attr('href')?.startsWith('/garden/')) {
         postLinks.push({
-          slug: String($(a).attr('href')?.replace(GARDEN_PATH_REL, '')),
+          slug: String($(a).attr('href')?.replace(GARDEN_PATH_REL, '')).split('#')[0],
           title: $(a).text(),
           abstract: '',
           isExist: false, // will do in the next part
