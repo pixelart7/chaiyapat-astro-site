@@ -512,8 +512,10 @@ __metadata:
     cheerio: ^1.0.0-rc.12
     recursive-readdir-sync: ^1.0.6
     remark-breaks: ^3.0.2
+    remark-callouts: ^2.0.0
     remark-heading-shift: ^1.1.1
     remark-obsidian: ^1.4.0
+    sass: ^1.57.1
     slugify: ^1.6.5
     svelte: ^3.46.4
     tailwindcss: ^3.0.24
@@ -1559,7 +1561,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chokidar@npm:^3.5.3":
+"chokidar@npm:>=3.0.0 <4.0.0, chokidar@npm:^3.5.3":
   version: 3.5.3
   resolution: "chokidar@npm:3.5.3"
   dependencies:
@@ -2931,6 +2933,13 @@ __metadata:
   version: 1.2.1
   resolution: "ieee754@npm:1.2.1"
   checksum: 5144c0c9815e54ada181d80a0b810221a253562422e7c6c3a60b1901154184f49326ec239d618c416c1c5945a2e197107aee8d986a3dd836b53dffefd99b5e7e
+  languageName: node
+  linkType: hard
+
+"immutable@npm:^4.0.0":
+  version: 4.2.2
+  resolution: "immutable@npm:4.2.2"
+  checksum: 4d6437ea9388fe8ceca7eed5c768cf438cda7fa14d2831b87b90aa00cc60d536964d107c255b8a2e5dbf4f44a0e1295afbb9d1f0a65fb4f57b936e71df601862
   languageName: node
   linkType: hard
 
@@ -4892,6 +4901,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"remark-callouts@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "remark-callouts@npm:2.0.0"
+  dependencies:
+    mdast-util-from-markdown: ^1.2.0
+    svg-parser: ^2.0.4
+    unist-util-visit: ^4.1.0
+  checksum: c82422d6332b8d177449c44fb26b363f92ff653964c6f4e4a5f05c2e5eb9fdc18c2fcc77f0d3615664b6d981580ef24bfa10ac3a8a9963979efd26cd633489bc
+  languageName: node
+  linkType: hard
+
 "remark-gfm@npm:^3.0.1":
   version: 3.0.1
   resolution: "remark-gfm@npm:3.0.1"
@@ -5161,6 +5181,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"sass@npm:^1.57.1":
+  version: 1.57.1
+  resolution: "sass@npm:1.57.1"
+  dependencies:
+    chokidar: ">=3.0.0 <4.0.0"
+    immutable: ^4.0.0
+    source-map-js: ">=0.6.2 <2.0.0"
+  bin:
+    sass: sass.js
+  checksum: 734a08781bcbe0e8defb2d54864e7012014ed3e68ba5fcb766189b002929019fc37b2f83a18d4be0b5f69ad77317c92396ce6112447ab47a194ed600ae1afb27
+  languageName: node
+  linkType: hard
+
 "section-matter@npm:^1.0.0":
   version: 1.0.0
   resolution: "section-matter@npm:1.0.0"
@@ -5322,7 +5355,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-js@npm:^1.0.2":
+"source-map-js@npm:>=0.6.2 <2.0.0, source-map-js@npm:^1.0.2":
   version: 1.0.2
   resolution: "source-map-js@npm:1.0.2"
   checksum: c049a7fc4deb9a7e9b481ae3d424cc793cb4845daa690bc5a05d428bf41bf231ced49b4cf0c9e77f9d42fdb3d20d6187619fc586605f5eabe995a316da8d377c
@@ -5610,6 +5643,13 @@ __metadata:
   version: 3.55.0
   resolution: "svelte@npm:3.55.0"
   checksum: 0b182973a4152fec8baa59cc168ca4528d63faba130bc83063a7d55d1732a81303b48745f4bffe53436b875b9c98960b0265d45473e5b3d25c77b116fdc274f0
+  languageName: node
+  linkType: hard
+
+"svg-parser@npm:^2.0.4":
+  version: 2.0.4
+  resolution: "svg-parser@npm:2.0.4"
+  checksum: b3de6653048212f2ae7afe4a423e04a76ec6d2d06e1bf7eacc618a7c5f7df7faa5105561c57b94579ec831fbbdbf5f190ba56a9205ff39ed13eabdf8ab086ddf
   languageName: node
   linkType: hard
 

@@ -4,6 +4,7 @@ import Icons from 'unplugin-icons/vite';
 import remarkObsidian from 'remark-obsidian';
 import remarkHeadingShift from 'remark-heading-shift';
 import remarkBreaks from 'remark-breaks';
+import remarkCallouts from 'remark-callouts';
 import remarkFigureCaption from '@microflash/remark-figure-caption'
 import slugify from 'slugify';
 import { getContentMdFileList, helperDirsAndFile, generatePathSlug } from './src/garden.ts'
@@ -20,6 +21,7 @@ export default defineConfig({
     // remarkHeadingShift, // conflict with normal md files
     remarkBreaks,
     remarkFigureCaption,
+    remarkCallouts,
     () => {
       const mdFileList = getContentMdFileList();
 
