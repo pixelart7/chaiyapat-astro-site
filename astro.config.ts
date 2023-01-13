@@ -37,11 +37,12 @@ export default defineConfig({
           let index = -1;
           if (filteredFiles.length > 1) {
             const filenames = filteredFiles.map((fIndex, i) => ({ filename: mdFileList[fIndex], index: fIndex }))
-            filenames.forEach((fn) => {
-              const filename = fn.filename.split('/');
-              if (filename === title) index === fn.index; // Exact match
-              else index = fn.index; // Partial match
-            })
+            for (let i = 0; i < filenames.length; i++) {
+              const filenameSplited = filenames[i].filename.split('/');
+              const filename = filenameSplited[filenameSplited.length - 1];
+              index = filenames[i].index;
+              if (filename === title) break;
+            }
           } else {
             index = (filteredFiles.length > 0) ? filteredFiles[0] : -1;
           }
