@@ -69,7 +69,7 @@ type Graph = { [key: string]: GraphNode }
 interface GraphNode {
   title: string,
   abstract: string,
-  outgoing: { slug: string, title: string, abstract: string, isExist: boolean }[],
+  outgoing: { slug: string, originalTitle: string, title: string, abstract: string, isExist: boolean }[],
   incoming: { slug: string, title: string, abstract: string }[],
   upperDirs: { slug: string, name: string, isExist: boolean }[],
 }
@@ -110,6 +110,7 @@ export function buildGraph(formattedGarden) {
     graph[slug].outgoing.forEach(({ slug: outgoingSlug }, i) => {
       if (allSlugs.indexOf(outgoingSlug) !== -1) {
         graph[slug].outgoing[i].isExist = true;
+        graph[slug].outgoing[i].originalTitle = graph[outgoingSlug].title;
         graph[slug].outgoing[i].abstract = graph[outgoingSlug].abstract;
       }
     })

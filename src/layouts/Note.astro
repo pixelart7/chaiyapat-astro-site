@@ -131,7 +131,7 @@ const extraClasses = `${node.upperDirs.map((ud) => `note-dir-${ud.slug}`).join('
                   <ul class="space-y-1 mt-2">
                     { node.outgoing.map((o) =>
                         <li>
-                          <NoteCardSmall slug={o.slug} title={o.title} abstract={o.abstract} isExist={o.isExist}></NoteCardSmall>
+                          <NoteCardSmall slug={o.slug} originalTitle={o.originalTitle} title={o.title} abstract={o.abstract} isExist={o.isExist}></NoteCardSmall>
                         </li>
                       )
                     }

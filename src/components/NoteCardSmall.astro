@@ -1,7 +1,7 @@
 ---
 import PreviouslyVisitedIcon from './PreviouslyVisitedIcon.svelte';
 
-const { title, abstract, slug, isExist } = Astro.props
+const { title, abstract, slug, isExist, originalTitle } = Astro.props
 ---
 
 { isExist ?
@@ -14,9 +14,9 @@ const { title, abstract, slug, isExist } = Astro.props
       "
     >
       <article>
-        <h1 class="font-medium font-display text-base">
+        <h1 class="font-medium font-display text-base leading-tight">
           { slug.split('/').length > 1 && <span class="font-display text-xs opacity-60">{slug.split('/').slice(0, -1).join('/')}/</span> }
-          {title}
+          {originalTitle}
           <PreviouslyVisitedIcon client:only="svelte" slug={slug}></PreviouslyVisitedIcon>
         </h1>
         {abstract &&
