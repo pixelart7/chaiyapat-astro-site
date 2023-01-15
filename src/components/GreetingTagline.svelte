@@ -9,6 +9,10 @@
   const greetings = [
     'Plenty of things here especially the smell of morning coffee ☕️',
     'Probably powered by coffee ☕️',
+    'Proven not a robot by internet checkboxes',
+    'Paradise for light-blue color enjoyer',
+    'Primarily in light blue',
+    'Personally wrote this randomly picked tagline',
   ]
 
   const greeting = randomItems(greetings, 1)
