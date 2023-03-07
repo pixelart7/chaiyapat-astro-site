@@ -2,7 +2,7 @@
 
 ## M.E. Electrical Engineering and Computer Science
 
-**04/2021 - 03/2023 (Expected)**
+**04/2021 - 03/2023**
 
 _Information, Graduate School of Electrical Engineering and Computer Science, <br/>Shibaura Institute of Technology, Tokyo, Japan_
 
@@ -14,9 +14,18 @@ Member of [Physically Augmented Interaction Laboratory / MANABE Lab](http://pai.
 
 ### Notable Activities
 
-- **09/2016 - present** -- Work at Global Learning Commons (GLC), a place for international discussion, as a student leader staff. Develop a room check-in system using Google App Script.
+- **04/2022 - 01/2023** -- Work at Global Learning Commons (GLC), a place for international discussion, as a student leader staff. Develop a room check-in system using Google App Script.
 - **2021** -- Develop a laboratory tour reservation system using Google App Script.
 - MEXT Scholarship (Monbukagakusho) recipient.
+
+### Graduation Thesis
+
+“Application, Implementation and the Emerging Importance of Slow Technology in the Fast-paced World”
+
+_Advisor: Prof. Hiroyuki Manabe (Shibaura Institute of Technology)_
+
+I studied about Slow Technology which is a design concept that encourage the users moment of reflection.
+As part of my exploration, I created and tested two applications that incorporated this concept, and outlined the challenges that exist in this field.
 
 ## B.Sc. Computer Science
 
@@ -40,4 +49,4 @@ _Computer Science (English Program), School of Information Technology, <br />Kin
 
 _Advisors: Dr. Tuul Triyason (King Mongkut’s University of Technology Thonburi) and Prof. Hiroaki Morino (Shibaura Institute of Technology)_
 
-Explore a way to find if two devices equipped with microphones are in proximity using noise in the environment.
+I investigated a method for determining the proximity of two devices that are equipped with microphones by analyzing ambient noise in their surroundings.
