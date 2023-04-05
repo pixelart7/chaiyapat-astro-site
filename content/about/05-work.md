@@ -1,6 +1,6 @@
 # Work Experiences
 
-## Senior Solution Developer <br />(former Front-end Web Developer)
+## Senior Solution Developer
 
 **04/2021 - 06/2021 (Part-time), 10/2019 - 03/2021 (Full-time)**
 
