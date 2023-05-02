@@ -1,5 +1,11 @@
 # Work Experiences
 
+## Chief Technology Officer
+
+**04/2023 - present**
+
+_Idea Vivat, Prachuap Khiri Khan, Thailand_
+
 ## Senior Solution Developer
 
 **04/2021 - 06/2021 (Part-time), 10/2019 - 03/2021 (Full-time)**

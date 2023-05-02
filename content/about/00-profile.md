@@ -2,6 +2,7 @@
 title: Chaiyapat Tantiworachot
 subtitle: Solution Dev + HCI Researcher
 aliasesAndAffiliation:
+  - YWC19 Staff
   - YWC18
   - PIX7 of PlearnGaming # see if can make link in here
   - KMUTT IA Buddies
