@@ -94,7 +94,7 @@ const extraClasses = `${node.upperDirs.map((ud) => `note-dir-${ud.slug}`).join('
           { headings.length > 3 &&
             <div class="col-start-2 row-start-1">
               <div class="sticky top-content transition-all lg:opacity-decrease-distraction hover:opacity-100">
-                <details class="max-w-[48ch] mx-auto lg:mx-none lg:max-w-[28ch] mb-8 border rounded border-gray-500/30">
+                <details class="md:text-sm max-w-[48ch] mx-auto lg:mx-none lg:max-w-[28ch] mb-8 border rounded border-gray-500/30">
                   <summary class="select-none font-display font-bold hover:opacity-75 cursor-pointer py-2 px-3">Contents</summary>
                   <ul class="list-disc pl-8 pt-3 pb-2 border-t border-gray-500/30">
                     {headings.map((h) => 
