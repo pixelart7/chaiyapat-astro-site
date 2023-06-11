@@ -30,20 +30,22 @@ const extraClasses = `${node.upperDirs.map((ud) => `note-dir-${ud.slug}`).join('
 <BaseLayout title={title} cover={cover || String(new URL('ogimage-note.png', Astro.site))} description={abstract}>
   <div class="bg-reader dark:bg-reader-dark shadow-2xl shadow-reader dark:shadow-reader-dark">
     <main class="mx-auto max-w-container pt-6 sm:pt-12">
-      <div class="px-4">
+      <div class="px-4 lg:pr-[32ch]">
         <div class="max-w-[65ch] mx-auto">
           <a href="/garden" class="text-sm p-1 hover:bg-primary-500/10 rounded -mx-1">
             ← Garden Home <img aria-hidden="true" src={LogoGarden} class="inline w-4 mb-1">
           </a>
         </div>
       </div>
-      { (cover) &&
-        <div class="max-w-[65ch] mx-auto mt-6 aspect-[1.91/1] bg-neutral-300 dark:bg-neutral-800 sm:rounded overflow-hidden">
-          <img src={cover} class="object-cover" alt={`Cover image for ${title}`} aria-hidden="true" />
-        </div>
-      }
+      <div class="lg:pr-[32ch]">
+        { (cover) &&
+          <div class="max-w-[65ch] mx-auto mt-6 aspect-[1.91/1] bg-neutral-300 dark:bg-neutral-800 sm:rounded overflow-hidden">
+            <img src={cover} class="object-cover" alt={`Cover image for ${title}`} aria-hidden="true" />
+          </div>
+        }
+      </div>
       <article class="pb-12 px-4">
-        <div class="max-w-container border-b border-gray-500/50 mb-12 pb-12">
+        <div class="border-b border-gray-500/50 mb-12 pb-12 lg:pr-[32ch]">
           <header class="max-w-[65ch] mx-auto pt-8">
             {
               node.upperDirs.length > 0 &&
@@ -106,7 +108,7 @@ const extraClasses = `${node.upperDirs.map((ud) => `note-dir-${ud.slug}`).join('
               </div>
             </div>
           }
-          <div class={`col-start-1 row-start-1 ${(headings.length <= 3) ? 'col-span-2' : ''}`}>
+          <div class="col-start-1 row-start-1">
             <NoteProseSection style={styleForNonExistedOutgoing} classes={extraClasses}>
               <slot />
             </NoteProseSection>
@@ -115,7 +117,7 @@ const extraClasses = `${node.upperDirs.map((ud) => `note-dir-${ud.slug}`).join('
       </article>
     </main>
     { (node.outgoing.length > 0 || node.incoming.length > 0) && 
-      <div class="mx-auto max-w-container px-4 lg:opacity-decrease-distraction hover:opacity-100 transition-opacity">
+      <div class="mx-auto max-w-container px-4 lg:opacity-decrease-distraction hover:opacity-100 transition-opacity lg:pr-[32ch]">
         <div class="">
           <div class="mx-auto max-w-[65ch] border-t border-dashed border-gray-500/50 py-12">
             <h1 class="text-sm opacity-75 mb-3 font-display font-bold" id="related-notes">Related Notes</h1>
