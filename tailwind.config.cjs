@@ -6,6 +6,12 @@ module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
+			spacing: {
+				content: 'calc(var(--navbar-height) + 2rem)',
+			},
+			opacity: {
+				'decrease-distraction': 'calc(var(--decrease-distraction-opacity))',
+			},
 			fontFamily: {
 				display: ['Epilogue', 'IBM Plex Sans Thai', ...defaultTheme.fontFamily.sans],
 				sans: ['Inter', 'IBM Plex Sans Thai', ...defaultTheme.fontFamily.sans],
