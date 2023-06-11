@@ -6,6 +6,9 @@ module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
+			fontSize: {
+				xxs: ['0.65rem', '0.85rem'],
+			},
 			spacing: {
 				content: 'calc(var(--navbar-height) + 2rem)',
 			},

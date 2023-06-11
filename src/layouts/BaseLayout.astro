@@ -115,7 +115,7 @@ const fallbackOgImage = new URL('ogimage.jpg', Astro.site);
 		if (navContainer) {
 			if (window.pageYOffset > lastY && window.pageYOffset > 64) {
 				bodyContainer?.style.setProperty('--navbar-height', `0px`);
-				bodyContainer?.style.setProperty('--decrease-distraction-opacity', '0.35');
+				bodyContainer?.style.setProperty('--decrease-distraction-opacity', '0.5');
 				navContainer.style.opacity = 0;
 				navContainer.style.pointerEvents = 'none';
 			} else {

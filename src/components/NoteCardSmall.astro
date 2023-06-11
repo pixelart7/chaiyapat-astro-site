@@ -14,14 +14,14 @@ const { title, abstract, slug, isExist, originalTitle } = Astro.props
       "
     >
       <article>
-        <h1 class="font-medium font-display text-base leading-tight">
-          { slug.split('/').length > 1 && <span class="font-display text-xs opacity-60">{slug.split('/').slice(0, -1).join('/')}/</span> }
+        <h1 class="font-medium font-display text-xs leading-tight">
+          { slug.split('/').length > 1 && <span class="font-display text-xxs opacity-60">{slug.split('/').slice(0, -1).join('/')}/</span> }
           {originalTitle || title}
           <PreviouslyVisitedIcon client:only="svelte" slug={slug}></PreviouslyVisitedIcon>
         </h1>
         {abstract &&
           <div>
-            <blockquote class="text-xs italic opacity-60 line-clamp-2">{abstract}</blockquote>
+            <blockquote class="text-xxs italic opacity-60 line-clamp-2">{abstract}</blockquote>
           </div>
         }
       </article>

@@ -91,7 +91,7 @@ const extraClasses = `${node.upperDirs.map((ud) => `note-dir-${ud.slug}`).join('
         <div class="lg:grid grid-cols-[1fr_32ch]">
           { headings.length > 3 &&
             <div class="col-start-2 row-start-1">
-              <div class="sticky top-content transition-all opacity-decrease-distraction hover:opacity-100">
+              <div class="sticky top-content transition-all lg:opacity-decrease-distraction hover:opacity-100">
                 <details class="max-w-[48ch] mx-auto lg:mx-none lg:max-w-[28ch] mb-8 border rounded border-gray-500/30">
                   <summary class="select-none font-display font-bold hover:opacity-75 cursor-pointer py-2 px-3">Contents</summary>
                   <ul class="list-disc pl-8 pt-3 pb-2 border-t border-gray-500/30">
@@ -115,7 +115,7 @@ const extraClasses = `${node.upperDirs.map((ud) => `note-dir-${ud.slug}`).join('
       </article>
     </main>
     { (node.outgoing.length > 0 || node.incoming.length > 0) && 
-      <div class="mx-auto max-w-container px-4">
+      <div class="mx-auto max-w-container px-4 lg:opacity-decrease-distraction hover:opacity-100 transition-opacity">
         <div class="">
           <div class="mx-auto max-w-[65ch] border-t border-dashed border-gray-500/50 py-12">
             <h1 class="text-sm opacity-75 mb-3 font-display font-bold" id="related-notes">Related Notes</h1>
