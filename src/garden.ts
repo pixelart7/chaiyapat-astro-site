@@ -49,7 +49,7 @@ export function format(garden) {
         },
         props: {
           post: n,
-          // gardenDirsAndFile: n.gardenDirsAndFile, // currently unused
+          dir: n.gardenDirsAndFile.dir, // currently unused
           title: n.gardenDirsAndFile.filename,
           frontmatter: {
             ...n.frontmatter,
