@@ -2,7 +2,7 @@
 
 ## Personal Cloud & IoTs
 
-**Ongoing Hobby**
+**2023**
 
 ![Image of my e-ink display](https://res.cloudinary.com/dhmwreddz/image/upload/v1673076026/digital-garden/portfolio/home-ambient-display.jpg "Home Ambient Display")
 
