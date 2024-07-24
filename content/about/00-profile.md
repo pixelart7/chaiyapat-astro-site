@@ -1,6 +1,6 @@
 ---
 title: Chaiyapat Tantiworachot
-subtitle: Solution Dev + HCI Researcher
+subtitle: Software Engineer + HCI Researcher
 aliasesAndAffiliation:
   - YWC18
   - PIX7 of PlearnGaming # see if can make link in here
