@@ -13,7 +13,7 @@ _IDX (Integrated Digital Experience), Bangkok, Thailand_
 
 ## Head of Engineering
 
-**04/2023 - 12/2024**
+**04/2023 - 12/2023**
 
 _Idea Vivat, Prachuap Khiri Khan, Thailand_
 
