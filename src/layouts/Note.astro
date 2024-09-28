@@ -7,7 +7,7 @@ import LogoGarden from 'src/assets/logo-garden.webp';
 
 import PhInfoBold from '~icons/ph/info-bold'
 import NoteCardSmall from '@components/NoteCardSmall.astro';
-import { generatePathSlug } from 'src/garden';
+// import { generatePathSlug } from 'src/garden';
 
 const { title, created, updated, cover, abstract, unlisted, headings, node } = Astro.props.frontmatter || Astro.props;
 
@@ -24,7 +24,7 @@ const styleForNonExistedOutgoing = nonExistOutgoing.map((slug) => `
   }
 `).join('\n')
 
-const extraClasses = `${node.upperDirs.map((ud) => `note-dir-${ud.slug}`).join(' ')} note-file-${generatePathSlug('', title)}`
+// const extraClasses = `${node.upperDirs.map((ud) => `note-dir-${ud.slug}`).join(' ')} note-file-${generatePathSlug('', title)}`
 ---
 
 <BaseLayout title={title} cover={cover || String(new URL('ogimage-note.png', Astro.site))} description={abstract}>

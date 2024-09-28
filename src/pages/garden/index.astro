@@ -2,18 +2,21 @@
 import BaseLayout from '@layouts/BaseLayout.astro'
 const { title } = Astro.props.frontmatter || Astro.props;
 
-import Index from '@content/garden/00 Index.md'
+import { getEntry } from 'astro:content';
+
 import NoteProseSection from '@components/NoteProseSection.astro';
 
-import { format } from 'src/garden';
 import NoteCard from '@components/NoteCard.astro';
 import NoteStage from '@components/NoteStage.astro';
 
 import LogoGarden from 'src/assets/logo-garden.webp';
 
-const notes = format((await Astro.glob('../../../content/garden/**/*.md'))
-  .filter((post) => !post.frontmatter.draft)
-  .filter((post) => !post.frontmatter.unlisted))
+const entry = await getEntry('garden', '00-index');
+const { Content, headings } = await entry.render();
+
+// const notes = format((await Astro.glob('../../../content/garden/**/*.md'))
+//   .filter((post) => !post.frontmatter.draft)
+//   .filter((post) => !post.frontmatter.unlisted))
 ---
 
 <BaseLayout title="Chaiyapat's Garden" cover={String(new URL('ogimage-garden.png', Astro.site))} description="Welcome to my digital garden. This is where I share my notes.">
@@ -28,7 +31,7 @@ const notes = format((await Astro.glob('../../../content/garden/**/*.md'))
             </div>
           </div>
           <NoteProseSection>
-            <Index />
+            <Content />
           </NoteProseSection>
         </div>
       </div>
@@ -36,9 +39,9 @@ const notes = format((await Astro.glob('../../../content/garden/**/*.md'))
     <div class="mx-auto max-w-container py-12 px-4">
       <h2 class="text-2xl font-display font-bold leading-none">All Notes <span class="text-sm font-medium opacity-70 whitespace-nowrap">Sort by last updated</span></h2>
       <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3 mt-8">
-        {notes.map((n) => (
+        <!-- {notes.map((n) => (
           <NoteCard title={n.props.title} frontmatter={n.props.frontmatter} slug={n.params.slug}></NoteCard>
-        ))}
+        ))} -->
       </div>
     </div>
   </div>
