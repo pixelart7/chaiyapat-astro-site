@@ -21,7 +21,7 @@ _Idea Vivat, Prachuap Khiri Khan, Thailand_
 - Pre-sale requirement gathering and business study.
 - Mentor, co-learn with the team.
 
-## Senior Solution Developer
+## Web Engineer + Solution Developer
 
 **04/2021 - 06/2021 (Part-time), 10/2019 - 03/2021 (Full-time)**
 
