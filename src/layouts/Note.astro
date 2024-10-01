@@ -57,7 +57,7 @@ const outgoingLinks = (await (doc as any).db.query.link.findMany({
                 }
               </ul>
             } -->
-            <h1 class="font-display text-2xl sm:text-3xl font-bold">{title}</h1>
+            <h1 class="font-display text-2xl sm:text-3xl font-bold">{title.replace(/.md$/, '')}</h1>
             <ul class="flex gap-3 mt-6">
               <li class="group">
                 <span class="text-xs opacity-75 inline-flex items-center">
