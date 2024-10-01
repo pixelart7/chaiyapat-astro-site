@@ -38,7 +38,7 @@ const email = btoa(profile.contact.email);
             <li class="h-6">
               <SvelteEmailDisplay client:only="svelte" obfuscatedEmail={email}></SvelteEmailDisplay>
             </li>
-            {profile.contact.links.map((link) => (
+            {profile.contact.links.map((link: any) => (
               <li class="h-6">
                 <span class="text-gray-600 mr-2 font-light inline-block w-16 md:w-auto" aria-hidden="true">{link[1]}.</span>
                 <span class="sr-only">{link[0]}: </span>

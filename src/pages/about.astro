@@ -7,8 +7,6 @@ import AboutSectionWeb from "@components/AboutSectionWeb.astro"
 import AboutMDProse from "@components/AboutMDProse.astro"
 import AboutIntroWeb from "@components/AboutIntroWeb.astro"
 
-import TempSideProject from "@components/TempSideProject.astro"
-
 const { data: abstract } = await getEntry('about', '01-abstract');
 
 const { Content: Intro } = await (await getEntry('about', '02-intro')).render();

@@ -16,7 +16,7 @@ const { title, created, updated, cover, abstract, unlisted, headings, node, entr
 
 const doc = await bdb.findDocument(`/${entry.id}`);
 
-const outgoingLinks = (await doc.db.query.link.findMany({
+const outgoingLinks = (await (doc as any).db.query.link.findMany({
   where: (l, { eq }) => (eq(l.from, `/${entry.id}`)),
 })).map((l) => ({
   url: (l.to) ? slugToUrl(generateSlug(l.to)) : '',

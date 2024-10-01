@@ -9,6 +9,7 @@
   ],
   "compilerOptions": {
     "baseUrl": ".",
+    "noImplicitAny": false,
     "types": [
       "unplugin-icons/types/astro",
     ],

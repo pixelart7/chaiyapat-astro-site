@@ -113,17 +113,17 @@ const fallbackOgImage = new URL('ogimage.jpg', Astro.site);
 		const navContainer = document.querySelector('#nav-container');
 		const bodyContainer = document.querySelector('body');
 		if (navContainer) {
-			if (window.pageYOffset > lastY && window.pageYOffset > 64) {
+			if (window.scrollY > lastY && window.scrollY > 64) {
 				bodyContainer?.style.setProperty('--navbar-height', `0px`);
 				bodyContainer?.style.setProperty('--decrease-distraction-opacity', '0.5');
-				navContainer.style.opacity = 0;
-				navContainer.style.pointerEvents = 'none';
+				(navContainer as any).style.opacity = 0;
+				(navContainer as any).style.pointerEvents = 'none';
 			} else {
 				bodyContainer?.style.setProperty('--navbar-height', `${navContainer.getBoundingClientRect().height || 0}px`);
 				bodyContainer?.style.setProperty('--decrease-distraction-opacity', '1');
-				navContainer.style = {};
+				(navContainer as any).style = {};
 			}
-			lastY = window.pageYOffset
+			lastY = window.scrollY
 		}
 	}
 
