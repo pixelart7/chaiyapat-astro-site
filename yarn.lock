@@ -566,6 +566,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/ibm-plex-sans-thai-looped@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "@fontsource/ibm-plex-sans-thai-looped@npm:5.1.0"
+  checksum: 10c0/ac219186e2c2760afabdac1b691f49af79dc559898585378a9a275eb808620d6e2574e66f05ca2e50f76af17818fdb71053b3a44a05a4ff6376541e1ee53c818
+  languageName: node
+  linkType: hard
+
 "@fontsource/ibm-plex-sans-thai@npm:^5.1.0":
   version: 5.1.0
   resolution: "@fontsource/ibm-plex-sans-thai@npm:5.1.0"
@@ -584,6 +591,13 @@ __metadata:
   version: 5.1.0
   resolution: "@fontsource/lora@npm:5.1.0"
   checksum: 10c0/5e787f3337eff5a1359c38edec08f474634e59c9a9bacff5dbee32401f8958d4566160685c032e8794c768d2b90dc06a3a619968aef7d61341276ce866fdff95
+  languageName: node
+  linkType: hard
+
+"@fontsource/noto-sans-thai-looped@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "@fontsource/noto-sans-thai-looped@npm:5.1.0"
+  checksum: 10c0/36e89c006026d329ec4fdc075bdacd5632e3993c4511c1d86948e1650f5543013acef7aa4799bd6da27d524dfde98cfceabedc0676c3872f2f0ca91a15d009d4
   languageName: node
   linkType: hard
 
@@ -2102,8 +2116,10 @@ __metadata:
     "@braindb/remark-wiki-link": "npm:^2.1.0"
     "@fontsource/epilogue": "npm:^5.1.0"
     "@fontsource/ibm-plex-sans-thai": "npm:^5.1.0"
+    "@fontsource/ibm-plex-sans-thai-looped": "npm:^5.1.0"
     "@fontsource/inter": "npm:^5.1.0"
     "@fontsource/lora": "npm:^5.1.0"
+    "@fontsource/noto-sans-thai-looped": "npm:^5.1.0"
     "@fontsource/noto-serif-thai": "npm:^5.1.0"
     "@fontsource/pridi": "npm:^5.1.0"
     "@fontsource/taviraj": "npm:^5.1.0"

@@ -116,7 +116,7 @@ const outgoingLinks = (await (doc as any).db.query.link.findMany({
         </div>
       </article>
     </main>
-    { true && 
+    { doc.documentsFrom().length > 0 || outgoingLinks.length > 0 && 
       <div class="mx-auto max-w-container px-4 lg:opacity-decrease-distraction hover:opacity-100 transition-opacity lg:pr-[32ch]">
         <div class="">
           <div class="mx-auto max-w-[65ch] border-t border-dashed border-gray-500/50 py-12">
