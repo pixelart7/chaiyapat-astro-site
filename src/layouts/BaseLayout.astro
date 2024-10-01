@@ -50,7 +50,7 @@ const fallbackOgImage = new URL('ogimage.jpg', Astro.site);
 		<meta name="generator" content={Astro.generator} />
 		<meta name="format-detection" content="telephone=no">
 
-    <meta property="og:title" content={title} />
+    <meta property="og:title" content={title.replace(/.md$/, '')} />
     <meta property="og:type" content="website" />
     { description &&
 			<meta property="og:description" content={description} />
@@ -64,7 +64,7 @@ const fallbackOgImage = new URL('ogimage.jpg', Astro.site);
     <meta property="profile:gender" content="male">
     <meta property="profile:username" content="pixelart7">
 
-		<title>{title}</title>
+		<title>{title.replace(/.md$/, '')}</title>
 		<script is:inline>
 			if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
 				document.documentElement.classList.add('dark')
@@ -133,4 +133,8 @@ const fallbackOgImage = new URL('ogimage.jpg', Astro.site);
 </script>
 
 <style is:global>
+.ext-link-select {
+	@apply font-sans text-xs;
+  user-select: none;
+}
 </style>

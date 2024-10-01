@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import Icons from 'unplugin-icons/vite'
 import remarkWikiLink from "@braindb/remark-wiki-link";
+import rehypeExternalLinks from "rehype-external-links";
 import { rehypeHeadingIds } from '@astrojs/markdown-remark';
 import remarkFigureCaption from '@microflash/remark-figure-caption'
 import tailwind from '@astrojs/tailwind';
@@ -28,6 +29,13 @@ export default defineConfig({
   markdown: {
     rehypePlugins: [
       rehypeHeadingIds,
+      [
+        rehypeExternalLinks,
+        {
+          content: { type: "text", value: " ↗" }, // ⤴
+          contentProperties: { "aria-hidden": true, class: "ext-link-select" },
+        },
+      ],
     ],
     remarkPlugins: [
       remarkFigureCaption,
