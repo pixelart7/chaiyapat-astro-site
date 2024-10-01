@@ -1,5 +1,5 @@
 ---
-created: "[[2023-01-01]]"
+created: 2023-01-01
 cover: "https://res.cloudinary.com/dhmwreddz/image/upload/v1673076025/digital-garden/cover/note-stages.jpg"
 ---
 

@@ -1,5 +1,5 @@
 ---
-created: "[[2023-06-11]]"
+created: 2023-06-11
 ---
 
 I like one-bag travel. It's easy, it's compact, and it limits my spending on "souvenir" (a.k.a presents for myself to remind me of this trip.) And I have to say that this bag really does it for me.

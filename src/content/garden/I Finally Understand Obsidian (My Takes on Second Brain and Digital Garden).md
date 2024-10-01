@@ -1,5 +1,5 @@
 ---
-created: "[[2023-01-07]]"
+created: 2023-01-07
 ---
 
 I believed that note-taking doesn't have a one-size-fits-all methodology. I've been through so many methods of taking notes. It started with taking a physical course note in college, moving to digital notes on iPad, and now, Obsidian as my primary note-taking tool.

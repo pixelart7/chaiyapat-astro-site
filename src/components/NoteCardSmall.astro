@@ -1,12 +1,12 @@
 ---
 import PreviouslyVisitedIcon from './PreviouslyVisitedIcon.svelte';
 
-const { title, abstract, slug, isExist, originalTitle } = Astro.props
+const { title, abstract, url, isExist, originalTitle } = Astro.props
 ---
 
 { isExist ?
     <a
-      href={`/garden/${slug}`}
+      href={`/garden${url}`}
       class="
         block border rounded shadow border-neutral-400/50 bg-reader dark:bg-reader-dark
         hover:shadow-lg hover:-translate-y-[1px] transition-transform duration-75
@@ -15,9 +15,9 @@ const { title, abstract, slug, isExist, originalTitle } = Astro.props
     >
       <article>
         <h1 class="font-medium font-display text-xs leading-tight">
-          { slug.split('/').length > 1 && <span class="font-display text-xxs opacity-60">{slug.split('/').slice(0, -1).join('/')}/</span> }
+          { url.split('/').length > 3 && <span class="font-display text-xxs opacity-60">{url.split('/').slice(0, -2).join('/')}/</span> }
           {originalTitle || title}
-          <PreviouslyVisitedIcon client:only="svelte" slug={slug}></PreviouslyVisitedIcon>
+          <PreviouslyVisitedIcon client:only="svelte" slug={url}></PreviouslyVisitedIcon>
         </h1>
         {abstract &&
           <div>
@@ -34,7 +34,7 @@ const { title, abstract, slug, isExist, originalTitle } = Astro.props
       "
     >
       <article>
-        <h1 class="font-medium font-display text-base">{title}</h1>
+        <h1 class="font-medium font-display text-xs">{title}</h1>
       </article>
     </div>
 }

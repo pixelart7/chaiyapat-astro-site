@@ -1,12 +1,29 @@
 # Work Experiences
 
-## Chief Technology Officer
+## Head of Engineering / Product Delivery
 
-**04/2023 - present**
+**01/2024 - present**
+
+_IDX, Bangkok, Thailand_
+
+- Led the development life cycle of all software products (Under the brand “Connex”)
+- Developed the front-end site
+- Planed, architected and monitor cloud infrastructure
+
+## Head of Engineering
+
+**04/2023 - 01/2024**
 
 _Idea Vivat, Prachuap Khiri Khan, Thailand_
 
-## Senior Solution Developer
+- Pre-sale/post-sale technical requirement gathering with clients
+- Led the development of most front-end projects with Nuxt 3
+- Planed and maintained cloud infrastructure of software projects (Firebase, DigitalOcean)
+- Mentored and recruit new engineers and designers
+- Maintained internal tools (e.g. Plane.so, Outline,) cloud infrastructure (Docker-based,) Google Workspace
+- Planed a development cycle and timeline of software products
+
+## Web Engineer + Solution Developer
 
 **04/2021 - 06/2021 (Part-time), 10/2019 - 03/2021 (Full-time)**
 

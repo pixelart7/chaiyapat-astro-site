@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 import BaseLayout from "@layouts/BaseLayout.astro"
 import GreetingTagline from '@components/GreetingTagline.svelte';
 import PhArrowRightBold from '~icons/ph/arrow-right-bold'
@@ -10,7 +12,7 @@ import FaceUwU from '../assets/face-uwu.png';
   <div class="">
     <div class="min-h-[420px] sm:min-h-[460px] pt-24 sm:pt-36 pb-16 px-4 max-w-container mx-auto">
       <div class="font-display">
-        <div class="h-12 mb-4"><img class="h-12" aria-hidden="true" src={FaceUwU} /></div>
+        <div class="h-12 mb-4"><img class="h-12" aria-hidden="true" src={FaceUwU.src} alt="Pixel-art face of PIX7's mascot" /></div>
         <h1 class="text-4xl font-bold">Welcome to the home of PIX7</h1>
         <GreetingTagline client:only="svelte"></GreetingTagline>
       </div>

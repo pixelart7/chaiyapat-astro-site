@@ -49,9 +49,9 @@ export default defineConfig({
 
           if (index !== -1) {
             const { dir, filename } = helperDirsAndFile(mdFileList[index]);
-            return `/garden/${generatePathSlug(dir, filename)}`;
+            return `${generatePathSlug(dir, filename)}`;
           }
-          return `/garden/${generatePathSlug('', title)}`;
+          return `${generatePathSlug('', title)}`;
         }})
       }
     ],

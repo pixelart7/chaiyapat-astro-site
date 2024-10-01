@@ -22,6 +22,9 @@ const { style, classes } = Astro.props
 
 <style is:global lang="scss">
   section.note-prose {
+    span.broken-link {
+      @apply text-primary-900 opacity-90 underline decoration-dashed;
+    }
     ul li > p {
       margin-top: 0;
       margin-bottom: 0;

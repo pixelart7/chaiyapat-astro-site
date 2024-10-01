@@ -1,6 +1,6 @@
 ---
-created: "[[2023-01-01]]"
-updated: "[[2023-01-06]]"
+created: 2023-01-01
+updated: 2023-01-06
 cover: "https://res.cloudinary.com/dhmwreddz/image/upload/v1673076025/digital-garden/cover/moving-forward.jpg"
 abstract: "Reasons behind my redesign decision. What's new and what's changed."
 ---

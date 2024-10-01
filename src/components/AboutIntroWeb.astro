@@ -1,12 +1,16 @@
 ---
+import { Image } from 'astro:assets';
+
+import { getEntry } from 'astro:content';
+
 import ProfileImage from '../assets/profile@2x.jpg';
 import QRImage from '../assets/qr.png';
 
 import CVSectionWeb from './AboutSectionWeb.astro';
 import SvelteEmailDisplay from './SvelteEmailDisplay.svelte';
 
-import { frontmatter as profile } from "@content/about/00-profile.md"
-import { frontmatter as abstract } from "@content/about/01-abstract.md"
+const { data: profile } = await getEntry('about', '00-profile');
+const { data: abstract } = await getEntry('about', '01-abstract');
 
 const email = btoa(profile.contact.email);
 ---
@@ -15,9 +19,11 @@ const email = btoa(profile.contact.email);
   <div class="p-3 sm:pt-4 sm:pb-6 sm:px-6 dark:text-gray-200 font-display">
     <div class="pt-2">
       <div class="flex">
-        <img class="rounded-full w-20 h-20" src={ProfileImage} alt="Chaiyapat's Image" />
+        <Image class="rounded-full w-20 h-20" src={ProfileImage} alt="Chaiyapat's Image" />
         <div class="flex-1"></div>
-        <a href="/card" aria-hidden="true" class="not-sr-only"><img class="w-20 h-20 dark:p-1 dark:bg-white dark:rounded" src={QRImage} /></a>
+        <a href="/card" aria-hidden="true" class="not-sr-only">
+          <Image class="w-20 h-20 dark:p-1 dark:bg-white dark:rounded" src={QRImage} alt="QR Code to this page" />
+        </a>
       </div>
       <div class="mt-4 md:flex">
         <div>

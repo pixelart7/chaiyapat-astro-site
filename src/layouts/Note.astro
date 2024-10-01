@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import { bdb, generateSlug, slugToUrl } from "@lib/braindb.mjs";
+
 import NoteProseSection from '@components/NoteProseSection.astro';
 import NoteStage from '@components/NoteStage.astro';
 import BaseLayout from './BaseLayout.astro'
@@ -9,22 +12,19 @@ import PhInfoBold from '~icons/ph/info-bold'
 import NoteCardSmall from '@components/NoteCardSmall.astro';
 // import { generatePathSlug } from 'src/garden';
 
-const { title, created, updated, cover, abstract, unlisted, headings, node } = Astro.props.frontmatter || Astro.props;
+const { title, created, updated, cover, abstract, unlisted, headings, node, entry } = Astro.props.frontmatter || Astro.props;
 
-const nonExistOutgoing = node.outgoing.filter((o) => !o.isExist).map((o) => o.slug)
+const doc = await bdb.findDocument(`/${entry.id}`);
 
-// HACK: Dirty way / non-accessible way to disable non-existing link out
-const styleForNonExistedOutgoing = nonExistOutgoing.map((slug) => `
-  a[href="/garden/${slug}"] {
-    opacity: 0.75;
-    text-decoration-style: dashed;
-  }
-  a[href="/garden/${slug}"]:hover {
-    opacity: 0.5;
-  }
-`).join('\n')
+const outgoingLinks = (await doc.db.query.link.findMany({
+  where: (l, { eq }) => (eq(l.from, `/${entry.id}`)),
+})).map((l) => ({
+  url: (l.to) ? slugToUrl(generateSlug(l.to)) : '',
+  title: l.to_slug,
+  abstract: '',
+  isExist: !!l.to,
+}))
 
-// const extraClasses = `${node.upperDirs.map((ud) => `note-dir-${ud.slug}`).join(' ')} note-file-${generatePathSlug('', title)}`
 ---
 
 <BaseLayout title={title} cover={cover || String(new URL('ogimage-note.png', Astro.site))} description={abstract}>
@@ -33,7 +33,7 @@ const styleForNonExistedOutgoing = nonExistOutgoing.map((slug) => `
       <div class="px-4 lg:pr-[32ch]">
         <div class="max-w-[65ch] mx-auto">
           <a href="/garden" class="text-sm p-1 hover:bg-primary-500/10 rounded -mx-1">
-            ← Garden Home <img aria-hidden="true" src={LogoGarden} class="inline w-4 mb-1">
+            ← Garden Home <Image aria-hidden="true" src={LogoGarden} class="inline w-4 mb-1" alt="">
           </a>
         </div>
       </div>
@@ -47,7 +47,7 @@ const styleForNonExistedOutgoing = nonExistOutgoing.map((slug) => `
       <article class="pb-12 px-4">
         <div class="border-b border-gray-500/50 mb-12 pb-12 lg:pr-[32ch]">
           <header class="max-w-[65ch] mx-auto pt-8">
-            {
+            <!-- {
               node.upperDirs.length > 0 &&
               <ul class="font-display text-sm opacity-60 font-medium mb-1">
                 {
@@ -56,7 +56,7 @@ const styleForNonExistedOutgoing = nonExistOutgoing.map((slug) => `
                   )
                 }
               </ul>
-            }
+            } -->
             <h1 class="font-display text-2xl sm:text-3xl font-bold">{title}</h1>
             <ul class="flex gap-3 mt-6">
               <li class="group">
@@ -109,39 +109,39 @@ const styleForNonExistedOutgoing = nonExistOutgoing.map((slug) => `
             </div>
           }
           <div class="col-start-1 row-start-1">
-            <NoteProseSection style={styleForNonExistedOutgoing} classes={extraClasses}>
+            <NoteProseSection>
               <slot />
             </NoteProseSection>
           </div>
         </div>
       </article>
     </main>
-    { (node.outgoing.length > 0 || node.incoming.length > 0) && 
+    { true && 
       <div class="mx-auto max-w-container px-4 lg:opacity-decrease-distraction hover:opacity-100 transition-opacity lg:pr-[32ch]">
         <div class="">
           <div class="mx-auto max-w-[65ch] border-t border-dashed border-gray-500/50 py-12">
             <h1 class="text-sm opacity-75 mb-3 font-display font-bold" id="related-notes">Related Notes</h1>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 gap-y-6">
-              { node.incoming.length > 0 &&
+              { doc && doc.documentsFrom().length > 0 &&
                 <div>
                   <h2 class="text-xs opacity-75 font-display">Backlinks</h2>
                   <ul class="space-y-1 mt-2">
-                    { node.incoming.map((o) =>
+                    { doc.documentsFrom().map((o) =>
                         <li>
-                          <NoteCardSmall slug={o.slug} title={o.title} abstract={o.abstract} isExist={true}></NoteCardSmall>
+                          <NoteCardSmall url={o.url()} title={o.frontmatter().title} abstract={o.frontmatter().abstract} isExist={true}></NoteCardSmall>
                         </li>
                       )
                     }
                   </ul>
                 </div>
               }
-              { node.outgoing.length > 0 &&
+              { outgoingLinks.length > 0 &&
                 <div>
                   <h2 class="text-xs opacity-75 font-display">Outgoing Links</h2>
                   <ul class="space-y-1 mt-2">
-                    { node.outgoing.map((o) =>
+                    { outgoingLinks.map((o) =>
                         <li>
-                          <NoteCardSmall slug={o.slug} originalTitle={o.originalTitle} title={o.title} abstract={o.abstract} isExist={o.isExist}></NoteCardSmall>
+                          <NoteCardSmall url={o.url} title={o.title} abstract={o.abstract} isExist={o.isExist}></NoteCardSmall>
                         </li>
                       )
                     }
