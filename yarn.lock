@@ -594,6 +594,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/pridi@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "@fontsource/pridi@npm:5.1.0"
+  checksum: 10c0/0abfed3bf23eb9ae4d6696c084189774777927eb700ab57029bed3e4f63f2178406adc9231bd0f165144b96dff97f3e356a557bcb9c6c91b942cc68490cb416b
+  languageName: node
+  linkType: hard
+
+"@fontsource/taviraj@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "@fontsource/taviraj@npm:5.1.0"
+  checksum: 10c0/99b14082203a99bb336620f951bb32a404dd3d20a2866f861d754217d346f0643784c09f0edafee3433a71324f71d402a20fe2c198992f9fd810e4e8da005184
+  languageName: node
+  linkType: hard
+
 "@iconify-json/fluent-emoji@npm:^1.2.0":
   version: 1.2.0
   resolution: "@iconify-json/fluent-emoji@npm:1.2.0"
@@ -2091,6 +2105,8 @@ __metadata:
     "@fontsource/inter": "npm:^5.1.0"
     "@fontsource/lora": "npm:^5.1.0"
     "@fontsource/noto-serif-thai": "npm:^5.1.0"
+    "@fontsource/pridi": "npm:^5.1.0"
+    "@fontsource/taviraj": "npm:^5.1.0"
     "@iconify-json/fluent-emoji": "npm:^1.2.0"
     "@iconify-json/ph": "npm:^1.2.0"
     "@microflash/remark-figure-caption": "npm:^2.0.2"

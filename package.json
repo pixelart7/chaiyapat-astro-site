@@ -21,6 +21,8 @@
     "@fontsource/inter": "^5.1.0",
     "@fontsource/lora": "^5.1.0",
     "@fontsource/noto-serif-thai": "^5.1.0",
+    "@fontsource/pridi": "^5.1.0",
+    "@fontsource/taviraj": "^5.1.0",
     "@microflash/remark-figure-caption": "^2.0.2",
     "add": "^2.0.6",
     "astro": "^5.0.0-beta.2",

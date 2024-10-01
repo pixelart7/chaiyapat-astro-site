@@ -47,17 +47,17 @@ const outgoingLinks = (await (doc as any).db.query.link.findMany({
       <article class="pb-12 px-4">
         <div class="border-b border-gray-500/50 mb-12 pb-12 lg:pr-[32ch]">
           <header class="max-w-[65ch] mx-auto pt-8">
-            <!-- {
-              node.upperDirs.length > 0 &&
+            {
+              entry.id.split('/').slice(0, -1).length > 0 &&
               <ul class="font-display text-sm opacity-60 font-medium mb-1">
                 {
-                  node.upperDirs.map((ud, i) => 
-                    <li class="inline">{ ud.isExist ? <a class="underline hover:opacity-75" href={`/garden/${ud.slug}`}>{ud.name}</a> : <span>{ud.name}</span> }<span class="opacity-75"> /</span></li>
+                  entry.id.split('/').slice(0, -1).map((ud) => 
+                    <li class="inline"><span>{ud}</span><span class="opacity-75"> /</span></li>
                   )
                 }
               </ul>
-            } -->
-            <h1 class="font-display text-2xl sm:text-3xl font-bold">{title.replace(/.md$/, '')}</h1>
+            }
+            <h1 class="font-display text-2xl sm:text-3xl font-bold">{title.split('/').slice(-1).join('').replace(/.md$/, '')}</h1>
             <ul class="flex gap-3 mt-6">
               <li class="group">
                 <span class="text-xs opacity-75 inline-flex items-center">

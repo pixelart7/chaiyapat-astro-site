@@ -18,8 +18,8 @@ export default {
 			fontFamily: {
 				display: ['Epilogue', 'IBM Plex Sans Thai', ...defaultTheme.fontFamily.sans],
 				sans: ['Inter', 'IBM Plex Sans Thai', ...defaultTheme.fontFamily.sans],
-				serif: ['Lora', 'Noto Serif Thai', ...defaultTheme.fontFamily.serif],
-				essay: ['Lora', 'Noto Serif Thai', ...defaultTheme.fontFamily.serif],
+				serif: ['Lora', 'Taviraj', ...defaultTheme.fontFamily.serif],
+				essay: ['Lora', 'Taviraj', ...defaultTheme.fontFamily.serif],
 			},
 			maxWidth: {
 				container: '1104px',
