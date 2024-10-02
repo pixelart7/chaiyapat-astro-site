@@ -13,6 +13,10 @@
     'Paradise for light-blue color enjoyer',
     'Primarily in light blue',
     'Personally wrote this randomly picked tagline',
+    'Proudly caffeinated and (occasionally) productive',
+    'Probably thinking about a c-word right now (it\'s "coffee")',
+    'Perfectly imperfect, just like my code or a left-and-forgotten Aeropress',
+    'Permanently into pixel arts, but rarely make it myself',
   ]
 
   const greeting = randomItems(greetings, 1)
