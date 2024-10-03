@@ -83,7 +83,7 @@ const outgoingLinks = (await (doc as any).db.query.link.findMany({
                 <span class="text-xs opacity-75">Publicity</span>
                 <div class="text-sm font-medium">Unlisted</div>
               </li>}
-              <NoteShare client:only="svelte" title={title} text={abstract}></NoteShare>
+              <NoteShare client:only="svelte" title={title.split('/').slice(-1).join('').replace(/.md$/, '')} text=""></NoteShare>
             </ul>
             { (abstract) && <div class="mt-6">
                 <blockquote class="italic text-sm opacity-60">
