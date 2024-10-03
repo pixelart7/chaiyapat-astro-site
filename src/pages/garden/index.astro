@@ -17,6 +17,10 @@ const notes = (await getCollection('garden'))
   .filter((post) => !post.data.draft)
   .filter((post) => !post.data.unlisted)
   .sort((a, b) => (b.data.updated || new Date('1970-01-01')).getTime() - (a.data.updated || new Date('1970-01-01')).getTime())
+  .sort((a, b) => (b.data.created || new Date('1970-01-01')).getTime() - (a.data.created || new Date('1970-01-01')).getTime())
+
+const featuredNotes = notes
+  .filter((post) => post.data.featured)
 
 ---
 
@@ -24,7 +28,7 @@ const notes = (await getCollection('garden'))
   <div class="bg-reader dark:bg-reader-dark shadow-2xl shadow-reader dark:shadow-reader-dark ">
     <div class="bg-gradient-to-b from-primary-400/10 via-transparent to-transparent">
       <div class="mx-auto max-w-container">
-        <div class="pb-24 px-4">
+        <div class="pb-12 px-4">
           <div class="max-w-container border-b border-gray-500/50 mb-20 pb-12">
             <div class="max-w-[65ch] mx-auto pt-24">
               <div class="h-16 mb-4"><img class="h-16" aria-hidden="true" src={LogoGarden.src} alt=""/></div>
@@ -38,8 +42,16 @@ const notes = (await getCollection('garden'))
       </div>
     </div>
     <div class="mx-auto max-w-container py-12 px-4">
+      {featuredNotes.length > 0 && 
+        <h2 class="text-2xl font-display font-bold leading-none">Featured Notes</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-8 mb-16">
+          {featuredNotes.map((n) => (
+            <NoteCard title={n.id} frontmatter={n.data} slug={n.slug}></NoteCard>
+          ))}
+        </div>
+      }
       <h2 class="text-2xl font-display font-bold leading-none">All Notes <span class="text-sm font-medium opacity-70 whitespace-nowrap">Sort by last updated</span></h2>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3 mt-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-8">
         {notes.map((n) => (
           <NoteCard title={n.id} frontmatter={n.data} slug={n.slug}></NoteCard>
         ))}

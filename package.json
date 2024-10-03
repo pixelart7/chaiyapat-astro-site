@@ -26,6 +26,7 @@
     "@fontsource/pridi": "^5.1.0",
     "@fontsource/taviraj": "^5.1.0",
     "@microflash/remark-figure-caption": "^2.0.2",
+    "@r4ai/remark-callout": "^0.6.2",
     "add": "^2.0.6",
     "astro": "^5.0.0-beta.2",
     "github-slugger": "^2.0.0",

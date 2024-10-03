@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import Icons from 'unplugin-icons/vite'
 import remarkWikiLink from "@braindb/remark-wiki-link";
 import rehypeExternalLinks from "rehype-external-links";
+import remarkCallout from "@r4ai/remark-callout";
 import { rehypeHeadingIds } from '@astrojs/markdown-remark';
 import remarkFigureCaption from '@microflash/remark-figure-caption'
 import tailwind from '@astrojs/tailwind';
@@ -38,6 +39,7 @@ export default defineConfig({
       ],
     ],
     remarkPlugins: [
+      remarkCallout,
       remarkFigureCaption,
       [
         remarkWikiLink,

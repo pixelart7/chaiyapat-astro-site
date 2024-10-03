@@ -9,6 +9,7 @@ const gardenCollection = defineCollection({
     abstract: z.string().optional(),
     unlisted: z.boolean().optional(),
     draft: z.boolean().optional(),
+    featured: z.boolean().optional(),
   }),
 });
 

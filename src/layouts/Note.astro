@@ -30,23 +30,23 @@ const outgoingLinks = (await (doc as any).db.query.link.findMany({
 <BaseLayout title={title} cover={cover || String(new URL('ogimage-note.png', Astro.site))} description={abstract}>
   <div class="bg-reader dark:bg-reader-dark shadow-2xl shadow-reader dark:shadow-reader-dark">
     <main class="mx-auto max-w-container pt-6 sm:pt-12">
-      <div class="px-4 lg:pr-[32ch]">
-        <div class="max-w-[65ch] mx-auto">
+      <div class="px-4 md:px-0 lg:pr-[16ch]">
+        <div class="max-w-[64ch] lg:max-w-[81ch] mx-auto">
           <a href="/garden" class="text-sm p-1 hover:bg-primary-500/10 rounded -mx-1">
             ← Garden Home <Image aria-hidden="true" src={LogoGarden} class="inline w-4 mb-1" alt="">
           </a>
         </div>
       </div>
-      <div class="lg:pr-[32ch]">
+      <div class="lg:pr-[16ch]">
         { (cover) &&
-          <div class="max-w-[65ch] mx-auto mt-6 aspect-[1.91/1] bg-neutral-300 dark:bg-neutral-800 sm:rounded overflow-hidden">
+          <div class="max-w-[64ch] lg:max-w-[81ch] mx-auto mt-6 aspect-[1.91/1] bg-neutral-300 dark:bg-neutral-800 sm:rounded overflow-hidden border-t border-b sm:border-x">
             <img src={cover} class="object-cover" alt={`Cover image for ${title}`} aria-hidden="true" />
           </div>
         }
       </div>
       <article class="pb-12 px-4">
-        <div class="border-b border-gray-500/50 mb-12 pb-12 lg:pr-[32ch]">
-          <header class="max-w-[65ch] mx-auto pt-8">
+        <div class="border-b border-gray-500/50 mb-12 pb-12 lg:pr-[16ch]">
+          <header class="max-w-[64ch] lg:max-w-[81ch] mx-auto pt-8">
             {
               entry.id.split('/').slice(0, -1).length > 0 &&
               <ul class="font-display text-sm opacity-60 font-medium mb-1">
@@ -94,17 +94,19 @@ const outgoingLinks = (await (doc as any).db.query.link.findMany({
           { headings.length > 3 &&
             <div class="col-start-2 row-start-1">
               <div class="sticky top-content transition-all lg:opacity-decrease-distraction hover:opacity-100">
-                <details class="md:text-sm max-w-[48ch] mx-auto lg:mx-none lg:max-w-[28ch] mb-8 border rounded border-gray-500/30">
-                  <summary class="select-none font-display font-bold hover:opacity-75 cursor-pointer py-2 px-3">Contents</summary>
-                  <ul class="list-disc pl-8 pt-3 pb-2 border-t border-gray-500/30">
-                    {headings.map((h) => 
-                        <li class="font-display mb-1 pl-1 py-1 md:py-0" style={`margin-left: ${h.depth - 1}em;`}>
-                          <a href={`#${h.slug}`} class="hover:opacity-75 underline">{h.text}</a>
-                        </li>
-                      )
-                    }
-                  </ul>
-                </details>
+                <div class="max-w-[65ch] mx-auto">
+                  <details class="md:text-sm max-w-[48ch] lg:mx-none lg:max-w-[34ch] mb-8 border rounded border-gray-500/30">
+                    <summary class="select-none font-display font-bold hover:opacity-75 cursor-pointer py-2 px-3">Contents</summary>
+                    <ul class="list-disc pl-8 pt-3 pb-2 border-t border-gray-500/30">
+                      {headings.map((h) => 
+                          <li class="font-sans mb-1 pl-1 py-1 md:py-0" style={`margin-left: ${h.depth - 1}em;`}>
+                            <a href={`#${h.slug}`} class="hover:opacity-75 decoration-none hover:underline">{h.text}</a>
+                          </li>
+                        )
+                      }
+                    </ul>
+                  </details>
+                </div>
               </div>
             </div>
           }

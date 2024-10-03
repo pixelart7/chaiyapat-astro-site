@@ -1,4 +1,5 @@
 ---
+import StarIcon from '~icons/ph/star-fill'
 import NoteStage from '@components/NoteStage.astro';
 
 const { title, frontmatter, slug } = Astro.props
@@ -17,9 +18,9 @@ const noteStage = 0 + ((frontmatter.abstract) ? 1 : 0) + ((frontmatter.cover) ? 
         <img src={frontmatter.cover} class="w-full h-full object-cover" alt={`Cover image for ${title}`}>
       </div>
     }
-    <div class="p-3 min-h-[8rem]">
-      { slug.split('/').length > 1 && <div class="font-display text-xs opacity-60 font-medium">{slug.split('/').slice(0, -1).join('/')}/</div> }
-      <h1 class={`font-bold font-display text-lg ${(slug.split('/').length > 1) ? '' : 'mt-2'}`}>{title.split('/').slice(-1).join('').replace(/.md$/, '')}</h1>
+    <div class="p-3 min-h-[10rem]">
+      { slug.split('/').length > 1 && <div class="font-display text-xs opacity-60 font-medium mb-1">{slug.split('/').slice(0, -1).join('/')}/</div> }
+      <h1 class={`font-bold font-display text-lg leading-snug ${(slug.split('/').length > 1) ? '' : 'mt-2'}`}>{title.split('/').slice(-1).join('').replace(/.md$/, '')}</h1>
       {frontmatter.abstract &&
         <div class="mt-3">
           <blockquote class="text-xs italic opacity-60">{frontmatter.abstract}</blockquote>
@@ -43,6 +44,9 @@ const noteStage = 0 + ((frontmatter.abstract) ? 1 : 0) + ((frontmatter.cover) ? 
             <div class="text-xs font-medium"><time datetime={frontmatter.updated || frontmatter.created}>{new Date(frontmatter.updated || frontmatter.created).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</time></div>
           </li>}
         </ul>
+        { frontmatter.featured &&
+          <div class="flex-1 flex justify-end text-[0.65rem]"><StarIcon aria-hidden="true"></StarIcon><span class="sr-only">Featured Note</span></div>
+        }
       </div>
     </div>
   </article>
