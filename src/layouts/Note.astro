@@ -41,7 +41,7 @@ const outgoingLinks = (await (doc as any).db.query.link.findMany({
       </div>
       <div class="lg:pr-[16ch]">
         { (cover) &&
-          <div class="max-w-[64ch] lg:max-w-[81ch] mx-auto mt-6 aspect-[1.91/1] bg-neutral-300 dark:bg-neutral-800 sm:rounded overflow-hidden border-t border-b sm:border-x">
+          <div class="max-w-[64ch] lg:max-w-[81ch] mx-auto mt-6 aspect-[1.91/1] bg-neutral-300 dark:bg-neutral-800 sm:rounded overflow-hidden border-t border-b sm:border-x dark:border-gray-500/50">
             <img src={cover} class="object-cover" alt={`Cover image for ${title}`} aria-hidden="true" />
           </div>
         }
