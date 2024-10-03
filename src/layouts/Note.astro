@@ -2,6 +2,8 @@
 import { Image } from 'astro:assets';
 import { bdb, generateSlug, slugToUrl } from "@lib/braindb.mjs";
 
+import NoteShare from '@components/NoteShare.svelte';
+
 import NoteProseSection from '@components/NoteProseSection.astro';
 import NoteStage from '@components/NoteStage.astro';
 import BaseLayout from './BaseLayout.astro'
@@ -58,7 +60,7 @@ const outgoingLinks = (await (doc as any).db.query.link.findMany({
               </ul>
             }
             <h1 class="font-display text-2xl sm:text-3xl font-bold">{title.split('/').slice(-1).join('').replace(/.md$/, '')}</h1>
-            <ul class="flex gap-3 mt-6">
+            <ul class="flex flex-wrap gap-4 mt-6">
               <li class="group">
                 <span class="text-xs opacity-75 inline-flex items-center">
                   Stage
@@ -71,16 +73,17 @@ const outgoingLinks = (await (doc as any).db.query.link.findMany({
               </li>
               {(created) && <li>
                 <span class="text-xs opacity-75">Created</span>
-                <div class="text-sm font-medium"><time datetime={created}>{new Date(created).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</time></div>
+                <div class="text-sm font-medium mt-[0.12rem]"><time datetime={created}>{new Date(created).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</time></div>
               </li>}
               {(updated) && <li>
                 <span class="text-xs opacity-75">Updated</span>
-                <div class="text-sm font-medium"><time datetime={updated}>{new Date(updated).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</time></div>
+                <div class="text-sm font-medium mt-[0.12rem]"><time datetime={updated}>{new Date(updated).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</time></div>
               </li>}
               {(unlisted) && <li>
                 <span class="text-xs opacity-75">Publicity</span>
                 <div class="text-sm font-medium">Unlisted</div>
               </li>}
+              <NoteShare client:only="svelte" title={title} text={abstract}></NoteShare>
             </ul>
             { (abstract) && <div class="mt-6">
                 <blockquote class="italic text-sm opacity-60">
