@@ -1,8 +1,12 @@
 <script lang="ts">
-  let isShow = navigator.canShare() && navigator.clipboard && window.isSecureContext;
-
   export let title = '';
   export let text = '';
+
+  let isShow = navigator.canShare({
+    title,
+    text,
+    url: window.location.href
+  }) && navigator.clipboard && window.isSecureContext;
 
   let isShowCopied = false;
 
