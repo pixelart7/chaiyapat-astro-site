@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "47f2e2404271a286",
+            "id": "bbecad172cedc8a6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "garden/The Sunday Morning Vibe.md",
+                "file": "garden/My Love Letter to \"Photographic Style\" on iPhone 16.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "garden/The Sunday Morning Vibe.md",
+                "file": "garden/My Love Letter to \"Photographic Style\" on iPhone 16.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "garden/The Sunday Morning Vibe.md",
+                "file": "garden/My Love Letter to \"Photographic Style\" on iPhone 16.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "garden/The Sunday Morning Vibe.md"
+                "file": "garden/My Love Letter to \"Photographic Style\" on iPhone 16.md"
               }
             }
           },
@@ -143,18 +143,16 @@
   "left-ribbon": {
     "hiddenItems": {
       "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false
     }
   },
-  "active": "47f2e2404271a286",
+  "active": "bbecad172cedc8a6",
   "lastOpenFiles": [
-    "garden/Story of This New Site.md",
-    "garden/The Sunday Morning Vibe.md",
     "garden/Vue Thai Conf 2024 - ครั้งแรกกับการจัดงานเทคฯ.md",
+    "garden/The Sunday Morning Vibe.md",
+    "garden/My Love Letter to \"Photographic Style\" on iPhone 16.md",
+    "garden/Story of This New Site.md",
     "Vue Thai Conf 2024 - Deep Dive เข้าสู่ Branding Guidelines โดย Dev ที่ทำ Design ได้นิดหน่อย.md",
     "garden/00 Index.md",
     "garden/Stages of My Note.md",
