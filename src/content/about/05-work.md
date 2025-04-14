@@ -1,51 +1,52 @@
 # Work Experiences
 
-## Head of Engineering / Product Delivery
+## Senior Full Stack Engineer  
+**02/2025 – present**  
+_Differs, Paris, France (Bangkok-based)_
 
-**01/2024 - present**
+- Leading the development and design overhaul of the Differs web application  
+- Collaborating with the design team to ensure an accessible and visually clean user interface  
+- Designing and implementing robust API endpoints  
 
+## Head of Engineering / Product Delivery  
+**01/2024 – 01/2025**  
 _IDX, Bangkok, Thailand_
 
-- Led the development life cycle of all software products (Under the brand “Connex”)
-- Developed the front-end site
-- Planed, architected and monitor cloud infrastructure
+- Led the end-to-end development lifecycle of all software products under the “Connex” brand  
+- Developed and maintained the front-end website  
+- Planned, architected, and monitored cloud infrastructure  
 
-## Head of Engineering
-
-**04/2023 - 01/2024**
-
+## Head of Engineering  
+**04/2023 – 01/2024**  
 _Idea Vivat, Prachuap Khiri Khan, Thailand_
 
-- Pre-sale/post-sale technical requirement gathering with clients
-- Led the development of most front-end projects with Nuxt 3
-- Planed and maintained cloud infrastructure of software projects (Firebase, DigitalOcean)
-- Mentored and recruit new engineers and designers
-- Maintained internal tools (e.g. Plane.so, Outline,) cloud infrastructure (Docker-based,) Google Workspace
-- Planed a development cycle and timeline of software products
+- Conducted technical requirement gathering with clients during pre-sale and post-sale phases  
+- Led front-end development for most projects using Nuxt 3  
+- Planned and maintained cloud infrastructure (Firebase, DigitalOcean)  
+- Mentored and recruited engineers and designers  
+- Maintained internal tools (e.g., Plane.so, Outline), cloud infrastructure (Docker-based), and Google Workspace  
+- Planned product development cycles and timelines  
 
-## Web Engineer + Solution Developer
-
-**04/2021 - 06/2021 (Part-time), 10/2019 - 03/2021 (Full-time)**
-
+## Web Engineer + Solution Developer  
+**04/2021 – 06/2021 (Part-time), 10/2019 – 03/2021 (Full-time)**  
 _Idea Vivat, Prachuap Khiri Khan, Thailand_
 
-- Develop front-end applications as a solution for customers. Mainly using Vue 2 + Composition API, and lately adopting Vue 3 and Nuxt 3
-- Analyze software architect during the gathering requirement phase.
-- Gather and analyze requirements and providing a solution for customers.
-- Coordinate with designers and managers for delivering product.
+- Developed front-end solutions primarily using Vue 2 + Composition API, later transitioning to Vue 3 and Nuxt 3  
+- Participated in software architecture planning during requirement analysis  
+- Gathered and analyzed client requirements to propose tailored solutions  
+- Coordinated with designers and managers to ensure timely and quality product delivery  
 
-## Freelance Web Solution Developer
+## Freelance Web Solution Developer  
+**Since 2016**  
 
-**Since 2016**
-
-Trusted by many agencies and companies, I work in my free-time. The scope of work that I usually involved with is in the front-end web development and technical project requirement gathering & planning.
+Trusted by various agencies and companies, I take on freelance projects in my spare time. My work primarily focuses on front-end web development and technical project planning and requirement gathering.
 
 ### Notable Projects
 
-- Single-page web apps: gave advice/work in some module in the big systems.
-- Landing pages: work on developing a front-end sites.
-- An interactive microsite: a short dress-up social game, a quiz for a commemorative event.
-- An interactive web for digital signage: as part of a valentine event, displayed in a signage screen at Siam area, Bangkok.
-- A web-based livestream overlay: an overlay for a livestreaming event of Bangkok Election 2022.
-- A website for an academic conference: [TSME-ICoME 2022](https://icome.tsme.org/icome2022/).
-- A website for a V-Tubers agency.
+- **Single-page web apps:** Provided consultation and module development for large-scale systems  
+- **Landing pages:** Delivered high-quality front-end development  
+- **Interactive microsites:** Built engaging projects including a short dress-up game and a commemorative quiz  
+- **Digital signage web app:** Developed an interactive Valentine’s Day display for signage in the Siam area, Bangkok  
+- **Livestream overlay:** Created a web-based overlay for the Bangkok Election 2022 live event  
+- **Academic conference website:** Built [TSME-ICoME 2022](https://icome.tsme.org/icome2022/)  
+- **V-Tuber agency website:** Developed the main website for a virtual talent agency  
