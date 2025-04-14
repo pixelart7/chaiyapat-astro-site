@@ -2,6 +2,7 @@
 
 ## Senior Full Stack Engineer  
 **02/2025 – present**  
+
 _Differs, Paris, France (Bangkok-based)_
 
 - Leading the development and design overhaul of the Differs web application  
@@ -10,6 +11,7 @@ _Differs, Paris, France (Bangkok-based)_
 
 ## Head of Engineering / Product Delivery  
 **01/2024 – 01/2025**  
+
 _IDX, Bangkok, Thailand_
 
 - Led the end-to-end development lifecycle of all software products under the “Connex” brand  
@@ -18,6 +20,7 @@ _IDX, Bangkok, Thailand_
 
 ## Head of Engineering  
 **04/2023 – 01/2024**  
+
 _Idea Vivat, Prachuap Khiri Khan, Thailand_
 
 - Conducted technical requirement gathering with clients during pre-sale and post-sale phases  
@@ -29,6 +32,7 @@ _Idea Vivat, Prachuap Khiri Khan, Thailand_
 
 ## Web Engineer + Solution Developer  
 **04/2021 – 06/2021 (Part-time), 10/2019 – 03/2021 (Full-time)**  
+
 _Idea Vivat, Prachuap Khiri Khan, Thailand_
 
 - Developed front-end solutions primarily using Vue 2 + Composition API, later transitioning to Vue 3 and Nuxt 3  
