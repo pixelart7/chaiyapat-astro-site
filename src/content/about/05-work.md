@@ -1,7 +1,7 @@
 # Work Experiences
 
 ## Senior Full Stack Engineer  
-**02/2025 – present**  
+**02/2025 – 12/2025**  
 
 _Differs, Paris, France (Bangkok-based)_
 
